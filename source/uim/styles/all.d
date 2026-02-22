@@ -6,5 +6,7 @@ public {
   import uim.html;
 
   import uim.style;
+  import uim.react;
+  import uim.vue;
   import uim.tabler;
 }

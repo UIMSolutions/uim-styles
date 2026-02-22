@@ -11,6 +11,8 @@ Monorepo for D-based UI layout libraries and integrations.
 - [foundation](foundation/README.md)
 - [materialize](materialize/README.md)
 - [materializedesign](materializedesign/README.md)
+- [react](react/README.md)
+- [vue](vue/README.md)
 - [tabler](tabler/README.md)
 
 ## Start here
