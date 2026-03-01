@@ -15,7 +15,7 @@ mixin(ShowModule!());
 class TABEmptySubtitle : H5P {
   mixin TABThis!(["empty-subtitle"]);
 
-  mixin(TABCalls!("EmptySubtitle"));
+  mixin(TABTemplate!("EmptySubtitle"));
 }
 ///
 unittest {

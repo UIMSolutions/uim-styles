@@ -20,7 +20,7 @@ class TABStatusDot : H5Span {
     return this;
   }
 
-  mixin(TABCalls!("StatusDot"));
+  mixin(TABTemplate!("StatusDot"));
 }
 
 ///

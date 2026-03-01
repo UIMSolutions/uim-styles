@@ -50,11 +50,24 @@ class TABDropdownMenuColumn : H5Div {
   //   return this;
   // }
 
-  mixin(TABCalls!("DropdownMenuColumn"));
+  mixin(TABTemplate!("DropdownMenuColumn"));
+  mixin(HtmlMethods!TABDropdownMenuColumn);
 }
 ///
 unittest {
   assert(TABDropdownMenuColumn() == `<div class="dropdown-menu-column"></div>`);
+  assert(TABDropdownMenuColumn(["testclass"]) == `<div class="dropdown-menu-column testclass"></div>`);
+  assert(TABDropdownMenuColumn(["a":"b"]) == `<div class="dropdown-menu-column" a="b"></div>`);
+  assert(TABDropdownMenuColumn(["testclass"], ["a":"b"]) == `<div class="dropdown-menu-column testclass" a="b"></div>`);
+
+  assert(TABDropdownMenuColumn("Hello") == `<div class="dropdown-menu-column">Hello</div>`);
+  assert(TABDropdownMenuColumn(["testclass"], "Hello") == `<div class="dropdown-menu-column testclass">Hello</div>`);
+  assert(TABDropdownMenuColumn(["a":"b"], "Hello") == `<div class="dropdown-menu-column" a="b">Hello</div>`);
+  assert(TABDropdownMenuColumn(["testclass"], ["a":"b"], "Hello") == `<div class="dropdown-menu-column testclass" a="b">Hello</div>`);
+
+  assert(TABDropdownMenuColumn().label("test") == `<div class="dropdown-menu-column" aria-labelledby="test"></div>`);
+  assert(TABDropdownMenuColumn().label("test").label() == "test");
+
   // assert(TABDropdownMenuColumn()
   //     .addLink() == `<div class="dropdown-menu-column"><a class="dropdown-item"></a></div>`);
 }

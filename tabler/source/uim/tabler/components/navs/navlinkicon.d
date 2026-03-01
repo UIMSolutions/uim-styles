@@ -7,7 +7,7 @@ import uim.tabler;
 class TABNavLinkIcon : H5Span {
   mixin TABThis!(["nav-link-icon"]);
 
-  mixin(TABCalls!("NavLinkIcon"));
+  mixin(TABTemplate!("NavLinkIcon"));
 }
 ///
 unittest {

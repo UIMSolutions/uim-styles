@@ -18,7 +18,7 @@ class TABDropdownMenuColumns : H5Div {
     return this;
   }
 
-  mixin(TABCalls!("DropdownMenuColumns"));
+  mixin(TABTemplate!("DropdownMenuColumns"));
 }
 ///
 unittest {

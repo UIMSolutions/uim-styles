@@ -1,0 +1,15 @@
+// Metadata
+name "react-demo"
+description "Standalone runnable demo for uim-styles React integration"
+homepage "https://www.sueel.de/uim/styles/react"
+authors "Ozan Nurettin Süel"
+copyright "Copyright © 2018 - 2026, ONS"
+license "Apache-2.0"
+
+// Target
+targetName "uim-styles-react-demo"
+targetType "executable"
+
+// Dependencies
+dependency "vibe-d" version="*"
+dependency "uim-styles:react" path=".."

@@ -9,7 +9,7 @@ mixin(ShowModule!());
 class TABEmptyImage : H5Div {
   mixin TABThis!(["empty-img"]);
 
-  mixin(TABCalls!("EmptyImage"));
+  mixin(TABTemplate!("EmptyImage"));
 }
 ///
 unittest {

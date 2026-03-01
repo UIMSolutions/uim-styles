@@ -20,7 +20,7 @@ class TABStatus : H5Span {
     return this;
   }
 
-  mixin(TABCalls!("Status"));
+  mixin(TABTemplate!("Status"));
 }
 ///
 unittest {

@@ -11,7 +11,7 @@ import uim.tabler;
 class TABRibbon : H5Div {
   mixin TABThis!(["ribbon"]);
 
-  mixin(TABCalls!("Ribbon"));
+  mixin(TABTemplate!("Ribbon"));
 }
 ///
 unittest {

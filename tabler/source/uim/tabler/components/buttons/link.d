@@ -10,7 +10,7 @@ mixin(ShowModule!());
 class TABButtonLink : H5A {
   mixin TABThis!(["btn"], ["role": "button"]);
   
-  mixin(TABCalls!("ButtonLink"));
+  mixin(TABTemplate!("ButtonLink"));
 }
 ///
 unittest {

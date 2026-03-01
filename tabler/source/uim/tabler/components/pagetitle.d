@@ -7,7 +7,7 @@ import uim.tabler;
 class TABPageTitle : H5H2 {
   mixin TABThis!(["page-title"]);
 
-  mixin(TABCalls!("PageTitle"));
+  mixin(TABTemplate!("PageTitle"));
 }
 ///
 unittest {

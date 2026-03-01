@@ -11,7 +11,7 @@ import uim.tabler;
 class TABPageHeader : H5Div {
   mixin TABThis!(["page-header"]);
 
-  mixin(TABCalls!("PageHeader"));
+  mixin(TABTemplate!("PageHeader"));
 }
 ///
 unittest {

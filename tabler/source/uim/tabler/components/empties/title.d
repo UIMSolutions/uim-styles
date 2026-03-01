@@ -9,7 +9,7 @@ mixin(ShowModule!());
 class TABEmptyTitle : H5P {
   mixin TABThis!(["empty-title"]);
 
-  mixin(TABCalls!("EmptyTitle"));
+  mixin(TABTemplate!("EmptyTitle"));
 }
 ///
 unittest {

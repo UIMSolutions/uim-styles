@@ -11,7 +11,7 @@ import uim.tabler;
 class TABFooter : H5Footer {
   mixin TABThis!(["footer"]);
 
-  mixin(TABCalls!("Footer"));
+  mixin(TABTemplate!("Footer"));
 }
 ///
 unittest {

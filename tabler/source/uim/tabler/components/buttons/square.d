@@ -9,7 +9,7 @@ mixin(ShowModule!());
 class TABButtonSquare : TABButton {
   mixin TABThis!(["btn-square"]);
 
-  mixin(TABCalls!("ButtonSquare"));
+  mixin(TABTemplate!("ButtonSquare"));
 }
 ///
 unittest {

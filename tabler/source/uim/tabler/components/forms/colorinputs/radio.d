@@ -13,7 +13,7 @@ mixin(ShowModule!());
 class TABFormColorInputRadio : H5Radio {
   mixin TABThis!(["form-colorinput-input"]);
   
-  mixin(TABCalls!("FormColorInputRadio"));
+  mixin(TABTemplate!("FormColorInputRadio"));
 }
 ///
 unittest {

@@ -9,7 +9,7 @@ mixin(ShowModule!());
 class TABButtonIconLink : TABButtonLink {
   mixin TABThis!(["btn-icon"]);
 
-  mixin(TABCalls!("ButtonIconLink"));
+  mixin(TABTemplate!("ButtonIconLink"));
 }
 ///
 unittest {

@@ -13,7 +13,7 @@ mixin(ShowModule!());
 class TABImageCheckImageContent : H5Span {
   mixin TABThis!( ["form-imagecheck-image"]);
 
-  mixin(TABCalls!("ImageCheckImageContent"));
+  mixin(TABTemplate!("ImageCheckImageContent"));
 }
 ///
 unittest {

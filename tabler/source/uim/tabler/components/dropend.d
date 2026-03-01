@@ -11,7 +11,7 @@ import uim.tabler;
 class TABDropend : H5Div {
   mixin TABThis!(["dropend"]);
 
-  mixin(TABCalls!("Dropend"));
+  mixin(TABTemplate!("Dropend"));
 }
 ///
 unittest {

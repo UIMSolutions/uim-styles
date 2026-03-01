@@ -13,7 +13,7 @@ mixin(ShowModule!());
 class TABTimelineTime : H5Div {
   mixin TABThis!(["list-timeline-time"]);
 
-  mixin(TABCalls!("TimelineTime"));
+  mixin(TABTemplate!("TimelineTime"));
 }
 ///
 unittest {

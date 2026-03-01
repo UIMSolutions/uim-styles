@@ -13,7 +13,7 @@ mixin(ShowModule!());
 class TABAlertTitle : H5H4 {
   mixin TABThis!(["alert-title"]);
 
-  mixin(TABCalls!("AlertTitle"));
+  mixin(TABTemplate!("AlertTitle"));
 }
 ///
 unittest {

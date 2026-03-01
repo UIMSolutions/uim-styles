@@ -13,7 +13,7 @@ mixin(ShowModule!());
 class TABEmptyIcon : H5Div {
   mixin TABThis!(["empty-icon"]);
 
-  mixin(TABCalls!("EmptyIcon"));
+  mixin(TABTemplate!("EmptyIcon"));
 }
 ///
 unittest {

@@ -14,7 +14,7 @@ class TABTimelineIcon : H5Div {
     return this;
   }
 
-  mixin(TABCalls!("TimelineIcon"));
+  mixin(TABTemplate!("TimelineIcon"));
 }
 ///
 unittest {

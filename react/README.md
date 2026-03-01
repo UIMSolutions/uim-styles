@@ -55,6 +55,16 @@ void main(string[] args)
 }
 ```
 
+### Run standalone demo
+
+From workspace root:
+
+```bash
+dub run :react-demo
+```
+
+Open `http://127.0.0.1:8080/` in your browser.
+
 ## License
 
 Apache-2.0

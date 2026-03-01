@@ -12,7 +12,7 @@ mixin(ShowModule!());
 class TABSelectgroupLabel : H5Span {
   mixin TABThis!(["form-selectgroup-label"]);
 
-  mixin(TABCalls!("SelectgroupLabel"));
+  mixin(TABTemplate!("SelectgroupLabel"));
 }
 
 ///

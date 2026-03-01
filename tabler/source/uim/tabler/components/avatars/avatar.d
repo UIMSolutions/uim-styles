@@ -13,7 +13,7 @@ mixin(ShowModule!());
 class TABAvatar : H5Span {
   mixin TABThis!(["avatar"]);
 
-  mixin(TABCalls!("Avatar"));
+  mixin(TABTemplate!("Avatar"));
 }
 ///
 unittest {

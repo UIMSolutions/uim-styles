@@ -13,7 +13,7 @@ mixin(ShowModule!());
 class TABCardTabs : H5Div {
   mixin TABThis!(["card-tabs"]);
 
-  mixin(TABCalls!("CardTabs"));
+  mixin(TABTemplate!("CardTabs"));
 }
 ///
 unittest {

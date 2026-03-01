@@ -11,7 +11,7 @@ import uim.tabler;
 class TABTimelineTitle : H5P {
   mixin TABThis!(["list-timeline-title"]);
 
-  mixin(TABCalls!("TimelineTitle"));
+  mixin(TABTemplate!("TimelineTitle"));
 }
 ///
 unittest {

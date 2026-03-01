@@ -12,7 +12,7 @@ class TABAvatarList : H5Div {
     return this;
   }
 
-  mixin(TABCalls!("AvatarList"));
+  mixin(TABTemplate!("AvatarList"));
 }
 
 ///

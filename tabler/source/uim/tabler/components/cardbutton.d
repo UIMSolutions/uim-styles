@@ -13,7 +13,7 @@ mixin(ShowModule!());
 class TABCardButton : H5A {
   mixin TABThis!(["card-btn"]);
 
-  mixin(TABCalls!("CardButton"));
+  mixin(TABTemplate!("CardButton"));
 }
 ///
 unittest {

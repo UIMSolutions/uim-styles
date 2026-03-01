@@ -9,7 +9,7 @@ mixin(ShowModule!());
 class TABInputIcon : H5Div {
   mixin TABThis!(["input-icon"]);
 
-  mixin(TABCalls!("InputIcon"));
+  mixin(TABTemplate!("InputIcon"));
 }
 ///
 unittest {

@@ -17,7 +17,7 @@ class TABFormCheck : H5Label {
 
   mixin(AddContentCalls!("TABFormCheck", "Label", "TABFormCheckLabel"));
 
-  mixin(TABCalls!("FormCheck"));
+  mixin(TABTemplate!("FormCheck"));
 }
 ///
 unittest {

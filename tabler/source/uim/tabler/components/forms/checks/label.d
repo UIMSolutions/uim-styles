@@ -13,7 +13,7 @@ mixin(ShowModule!());
 class TABFormCheckLabel : H5Span {
   mixin TABThis!(["form-check-label"]);
  
-  mixin(TABCalls!("FormCheckLabel"));
+  mixin(TABTemplate!("FormCheckLabel"));
 }
 
 ///

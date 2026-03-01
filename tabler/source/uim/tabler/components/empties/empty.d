@@ -43,7 +43,7 @@ class TABEmpty : H5Div {
     return this;
   }
 
-  mixin(TABCalls!("Empty"));
+  mixin(TABTemplate!("Empty"));
 }
 ///
 unittest {

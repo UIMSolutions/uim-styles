@@ -10,7 +10,7 @@ mixin(ShowModule!());
 class TABNavLinkTitle : H5Span {
   mixin TABThis!(["nav-link-title"]);
 
-  mixin(TABCalls!("NavLinkTitle"));
+  mixin(TABTemplate!("NavLinkTitle"));
 }
 
 ///

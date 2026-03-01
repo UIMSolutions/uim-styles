@@ -11,7 +11,7 @@ import uim.tabler;
 class TABTimelineContent : H5Div {
   mixin TABThis!(["list-timeline-content"]);
 
-  mixin(TABCalls!("TimelineContent"));
+  mixin(TABTemplate!("TimelineContent"));
 }
 ///
 unittest {

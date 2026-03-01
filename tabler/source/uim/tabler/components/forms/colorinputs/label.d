@@ -13,7 +13,7 @@ mixin(ShowModule!());
 class TABFormColorInputLabel : H5Label {
   mixin TABThis!(["form-colorinput-label"]);
  
-  mixin(TABCalls!("FormColorInputLabel"));
+  mixin(TABTemplate!("FormColorInputLabel"));
 }
 ///
 unittest {

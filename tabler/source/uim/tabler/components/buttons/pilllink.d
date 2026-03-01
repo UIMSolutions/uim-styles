@@ -8,7 +8,7 @@ mixin(ShowModule!());
 
 class TABButtonPillLink : TABButtonLink {
   mixin TABThis!(["btn-pill"]);
-  mixin(TABCalls!("ButtonPillLink"));
+  mixin(TABTemplate!("ButtonPillLink"));
 }
 
 ///

@@ -9,7 +9,7 @@ mixin(ShowModule!());
 class TABEmptyAction : H5Div {
   mixin TABThis!(["empty-action"]);
 
-  mixin(TABCalls!("EmptyAction"));
+  mixin(TABTemplate!("EmptyAction"));
 }
 ///
 unittest {

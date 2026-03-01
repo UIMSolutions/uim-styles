@@ -18,7 +18,7 @@ class TABAlertLink : H5A {
     return this;
   }
 
-  mixin(TABCalls!("AlertLink"));
+  mixin(TABTemplate!("AlertLink"));
 }
 ///
 unittest {

@@ -13,7 +13,7 @@ mixin(ShowModule!());
 class TABFormCheckInput : H5Input {
   mixin TABThis!(["form-check-input"]);
 
-  mixin(TABCalls!("FormCheckInput"));
+  mixin(TABTemplate!("FormCheckInput"));
 }
 ///
 unittest {

@@ -9,7 +9,7 @@ mixin(ShowModule!());
 class TABFormFooter : H5Div {
   mixin TABThis!(["form-footer"]);
   
-  mixin(TABCalls!("FormFooter"));
+  mixin(TABTemplate!("FormFooter"));
 }
 
 ///

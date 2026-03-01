@@ -16,7 +16,7 @@ class TABDatagridContent : H5Div {
     return this;
   }
 
-  mixin(TABCalls!("DatagridContent"));
+  mixin(TABTemplate!("DatagridContent"));
 }
 ///
 unittest {

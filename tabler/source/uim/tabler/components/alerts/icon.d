@@ -18,7 +18,7 @@ class TABAlertIcon : H5Div {
     return this;
   }
 
-  mixin(TABCalls!("AlertIcon"));
+  mixin(TABTemplate!("AlertIcon"));
 }
 ///
 unittest {
