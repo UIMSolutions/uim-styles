@@ -14,8 +14,19 @@ class TABCardButton : H5A {
   mixin TABThis!(["card-btn"]);
 
   mixin(TABTemplate!("CardButton"));
+  mixin(HtmlMethods!TABCardButton);
 }
 ///
 unittest {
   assert(TABCardButton() == `<a class="card-btn"></a>`);
+  assert(TABCardButton(["testclass"]) == `<a class="card-btn testclass"></a>`);
+  assert(TABCardButton(["a":"b"]) == `<a class="card-btn" a="b"></a>`);
+  assert(TABCardButton(["testclass"], ["a":"b"]) == `<a class="card-btn testclass" a="b"></a>`);
+
+  assert(TABCardButton("Hello") == `<a class="card-btn">Hello</a>`);
+  assert(TABCardButton(["testclass"], "Hello") == `<a class="card-btn testclass">Hello</a>`);
+  assert(TABCardButton(["a":"b"], "Hello") == `<a class="card-btn" a="b">Hello</a>`);
+  assert(TABCardButton(["testclass"], ["a":"b"], "Hello") == `<a class="card-btn testclass" a="b">Hello</a>`);
+
+  assert(TABCardButton().href("https://example.com") == `<a class="card-btn" href="https://example.com"></a>`);
 }

@@ -4,14 +4,15 @@ import uim.bootstrap4;
 
 mixin(ShowModule!());
 
-@safe: 
+@safe:
 
 class BS4ImageFluid : BS4Image {
-  mixin(H5This!("Img", ["img-fluid"]));
-}
-static BS4ImageFluid"));
+  mixin(BS4This!(["img-fluid"]));
 
+  mixin(BS4Template!("CardButton"));
+  mixin(HtmlMethods!BS4CardButton);
+}
 ///
 unittest {
   assert(BS4ImageFluid == `<img class="img-fluid">`);
-}}
+}
