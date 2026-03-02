@@ -10,7 +10,7 @@ import uim.tabler;
  */ 
 class TABTimelineContent : H5Div {
   mixin H5Template!(TABTimelineContent, ["list-timeline-content"]);
-  mixin(HtmlMethods!TABTTimelineContent);
+  mixin(HtmlMethods!TABTimelineContent);
 }
 ///
 unittest {

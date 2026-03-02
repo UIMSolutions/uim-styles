@@ -11,17 +11,25 @@ mixin(ShowModule!());
  * https://tabler.io/docs/alerts
  */
 class TABAlertLink : H5A {
-  mixin TABTemplate!(["alert"], ["role":"alert"]);
+  mixin H5Template!(TABAlertLink, ["alert"], ["role":"alert"]);
+  mixin(HtmlMethods!TABAlertLink);
 
   TABAlertLink color(string value) {
-    this.addClass(value);
+    this.addClass("bg-" ~ value);
     return this;
   }
-
-  mixin(TABTemplate!("AlertLink"));
 }
 ///
 unittest {
   assert(TABAlertLink() == `<a class="alert" role="alert"></a>`);
-  // assert(TABAlertLink().color("blue") == `<a class="bg-blue alert" role="alert"></a>`);
+  assert(TABAlertLink(["testclass"]) == `<a class="alert testclass" role="alert"></a>`);
+  assert(TABAlertLink(["a": "b"]) == `<a class="alert" a="b" role="alert"></a>`);
+  assert(TABAlertLink(["testclass"], ["a": "b"]) == `<a class="alert testclass" a="b" role="alert"></a>`);
+
+  assert(TABAlertLink("Hello") == `<a class="alert" role="alert">Hello</a>`);
+  assert(TABAlertLink(["testclass"], "Hello") == `<a class="alert testclass" role="alert">Hello</a>`);
+  assert(TABAlertLink(["a": "b"], "Hello") == `<a class="alert" a="b" role="alert">Hello</a>`);
+  assert(TABAlertLink(["testclass"], ["a": "b"], "Hello") == `<a class="alert testclass" a="b" role="alert">Hello</a>`);
+
+  assert(TABAlertLink().color("blue") == `<a class="alert bg-blue" role="alert"></a>`);
 }

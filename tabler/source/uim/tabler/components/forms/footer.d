@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe:
 
 class TABFormFooter : H5Div {
-  mixin TABTemplate!(TABFormFooter, ["form-footer"]);
+  mixin H5Template!(TABFormFooter, ["form-footer"]);
   mixin(HtmlMethods!TABFormFooter); 
 }
 ///

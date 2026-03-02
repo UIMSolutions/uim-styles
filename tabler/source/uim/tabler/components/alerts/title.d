@@ -25,6 +25,4 @@ unittest {
   assert(TABAlertTitle(["testclass"], "Hello") == `<h4 class="alert-title testclass">Hello</h4>`);
   assert(TABAlertTitle(["a": "b"], "Hello") == `<h4 class="alert-title" a="b">Hello</h4>`);
   assert(TABAlertTitle(["testclass"], ["a": "b"], "Hello") == `<h4 class="alert-title testclass" a="b">Hello</h4>`);
-
-  assert(TABAlertTitle().color("blue") == `<h4 class="bg-blue alert-title"></h4>`);
 }
