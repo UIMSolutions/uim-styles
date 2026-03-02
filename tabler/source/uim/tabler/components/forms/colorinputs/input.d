@@ -11,13 +11,15 @@ mixin(ShowModule!());
  * https://tabler.io/docs/forms#color-inputs
  */
 class TABFormColorInput : H5Input {
-  mixin TABTemplate!(["form-colorinput-input"]);
-
-  mixin(TABTemplate!("FormColorInput"));
+  mixin H5Template!(TABFormColorInput, ["form-colorinput-input"]);
+  mixin(HtmlMethods!TABFormColorInput);
 }
 ///
 unittest {
   assert(TABFormColorInput() == `<input class="form-colorinput-input" />`);
+  assert(TABFormColorInput(["testclass"]) == `<input class="form-colorinput-input testclass" />`);
+  assert(TABFormColorInput(["a": "b"]) == `<input class="form-colorinput-input" a="b" />`);
+  assert(TABFormColorInput(["testclass"], ["a": "b"]) == `<input class="form-colorinput-input testclass" a="b" />`);
 }
 
 

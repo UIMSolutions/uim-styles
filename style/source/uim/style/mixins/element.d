@@ -41,30 +41,6 @@ template H5This(string[] thisClasses = null, string[string] thisAttributes = nul
   }
 }
 
-string tabCalls(string name) {
-  if (name.length > 0) {
-    name = "H5" ~ name[0 .. 1].capitalize ~ name[1 .. $];
-  }
-
-  return `
-    static {name} opCall() {
-      return new {name}();
-    }
-    static {name} opCall(string content) {
-      return new {name}(content);
-    }
-    static {name} opCall(string[] classes, string content = "") {
-      return new {name}(classes, content);
-    }
-    static {name} opCall(string[string] attributes, string content = "") {
-      return new {name}(attributes, content);
-    }
-    static {name} opCall(string[] classes, string[string] attributes, string content = "") {
-      return new {name}(classes, attributes, content);
-    }
-    `.mustache("name", name);
-}
-
 template H5Calls(string name) {
   const char[] H5Calls = tabCalls(name);
 }
@@ -123,4 +99,6 @@ template H5Template(alias T, string[] thisClasses = null, string[string] thisAtt
   static T opCall(string[] classes, string[string] attributes, string content = "") {
     return new T(classes, attributes, content);
   }
+
+  mixin(HtmlMethods!T);
 }

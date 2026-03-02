@@ -71,6 +71,3 @@ template TABCalls(string name) {
   const char[] TABCalls = tabCalls(name);
 }
 
-template TABTemplate(string name) {
-  const char[] TABTemplate = tabCalls(name);
-}

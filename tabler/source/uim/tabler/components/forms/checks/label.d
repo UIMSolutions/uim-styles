@@ -11,14 +11,20 @@ mixin(ShowModule!());
  * https://tabler.io/docs/forms#checks
  */
 class TABFormCheckLabel : H5Span {
-  mixin TABTemplate!(["form-check-label"]);
- 
-  mixin(TABTemplate!("FormCheckLabel"));
+  mixin H5Template!(TABFormCheckLabel, ["form-check-label"]);
+  mixin(HtmlMethods!TABFormCheckLabel);
 }
-
 ///
 unittest {
   assert(TABFormCheckLabel() == `<span class="form-check-label"></span>`);
+  assert(TABFormCheckLabel(["testclass"]) == `<span class="form-check-label testclass"></span>`);
+  assert(TABFormCheckLabel(["a": "b"]) == `<span class="form-check-label" a="b"></span>`);
+  assert(TABFormCheckLabel(["testclass"], ["a": "b"]) == `<span class="form-check-label testclass" a="b"></span>`);
+
+  assert(TABFormCheckLabel("Hello") == `<span class="form-check-label">Hello</span>`);
+  assert(TABFormCheckLabel(["testclass"], "Hello") == `<span class="form-check-label testclass">Hello</span>`);
+  assert(TABFormCheckLabel(["a": "b"], "Hello") == `<span class="form-check-label" a="b">Hello</span>`);
+  assert(TABFormCheckLabel(["testclass"], ["a": "b"], "Hello") == `<span class="form-check-label testclass" a="b">Hello</span>`);
 }
 
 
