@@ -17,11 +17,18 @@ mixin(ShowModule!());
   * ``` 
   */
 class TABButtonPill : TABButton {
-  mixin TABTemplate!(["btn-pill"]);
-
-  mixin(TABTemplate!("ButtonPill"));
+  mixin H5Template!(TABButtonPill, ["btn-pill"]);
+  mixin(HtmlMethods!TABButtonPill);
 }
 ///
 unittest {
-  assert(TABButtonPill() == `<button class="btn btn-pill" type="button"></button>`);
+  assert(TABButtonPill() == `<button class="btn btn-pill" type="button"></button>`);  
+  assert(TABButtonPill(["testclass"]) == `<button class="btn btn-pill testclass" type="button"></button>`);
+  assert(TABButtonPill(["a":"b"]) == `<button class="btn btn-pill" type="button" a="b"></button>`);
+  assert(TABButtonPill(["testclass"], ["a":"b"]) == `<button class="btn btn-pill testclass" type="button" a="b"></button>`);
+
+  assert(TABButtonPill("Hello") == `<button class="btn btn-pill" type="button">Hello</button>`);
+  assert(TABButtonPill(["testclass"], "Hello") == `<button class="btn btn-pill testclass" type="button">Hello</button>`);
+  assert(TABButtonPill(["a":"b"], "Hello") == `<button class="btn btn-pill" type="button" a="b">Hello</button>`);
+  assert(TABButtonPill(["testclass"], ["a":"b"], "Hello") == `<button class="btn btn-pill testclass" type="button" a="b">Hello</button>`);
 }

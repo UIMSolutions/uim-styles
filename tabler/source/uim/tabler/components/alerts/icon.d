@@ -11,17 +11,25 @@ mixin(ShowModule!());
  * https://tabler.io/docs/alerts
  */
 class TABAlertIcon : H5Div {
-  mixin TABTemplate!(["alert-icon"]);
+  mixin H5Template!(TABAlertIcon, ["alert-icon"]);
+  mixin(HtmlMethods!TABAlertIcon);
 
   TABAlertIcon color(string value) {
     this.addClass(value);
     return this;
   }
-
-  mixin(TABTemplate!("AlertIcon"));
 }
 ///
 unittest {
   assert(TABAlertIcon() == `<div class="alert-icon"></div>`);
-  // assert(TABAlertIcon().color("blue") == `<div class="bg-blue alert-icon"></div>`);
+  assert(TABAlertIcon(["testclass"]) == `<div class="alert-icon testclass"></div>`);
+  assert(TABAlertIcon(["a": "b"]) == `<div class="alert-icon" a="b"></div>`);
+  assert(TABAlertIcon(["testclass"], ["a": "b"]) == `<div class="alert-icon testclass" a="b"></div>`);
+
+  assert(TABAlertIcon("Hello") == `<div class="alert-icon">Hello</div>`);
+  assert(TABAlertIcon(["testclass"], "Hello") == `<div class="alert-icon testclass">Hello</div>`);
+  assert(TABAlertIcon(["a": "b"], "Hello") == `<div class="alert-icon" a="b">Hello</div>`);
+  assert(TABAlertIcon(["testclass"], ["a": "b"], "Hello") == `<div class="alert-icon testclass" a="b">Hello</div>`);
+
+  assert(TABAlertIcon().color("blue") == `<div class="alert-icon blue"></div>`);
 }
