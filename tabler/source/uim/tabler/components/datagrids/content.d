@@ -9,17 +9,23 @@ import uim.tabler;
  * https://tabler.io/docs/datagrid#content
  */
 class TABDatagridContent : H5Div {
-  mixin TABTemplate!(["datagrid-content"]);
+  mixin H5Template!(TABDatagridContent, ["datagrid-content"]);
+  mixin(HtmlMethods!TABDatagridContent);
 
   TABDatagridContent color(string value) {
     this.addClass("bg-" ~ value);
     return this;
   }
-
-  mixin(TABTemplate!("DatagridContent"));
 }
 ///
 unittest {
   assert(TABDatagridContent() == `<div class="datagrid-content"></div>`);
-  // assert(TABDatagridContent().color("blue") == `<div class="bg-blue datagrid-content"></div>`);
+  assert(TABDatagridContent(["testclass"]) == `<div class="datagrid-content testclass"></div>`);
+  assert(TABDatagridContent(["a": "b"]) == `<div class="datagrid-content" a="b"></div>`);
+  assert(TABDatagridContent(["testclass"], ["a": "b"]) == `<div class="datagrid-content testclass" a="b"></div>`);
+
+  assert(TABDatagridContent("Hello") == `<div class="datagrid-content">Hello</div>`);
+  assert(TABDatagridContent(["testclass"], "Hello") == `<div class="datagrid-content testclass">Hello</div>`);
+  assert(TABDatagridContent(["a": "b"], "Hello") == `<div class="datagrid-content" a="b">Hello</div>`);
+  assert(TABDatagridContent(["testclass"], ["a": "b"], "Hello") == `<div class="datagrid-content testclass" a="b">Hello</div>`);  
 }

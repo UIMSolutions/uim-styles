@@ -7,11 +7,11 @@ mixin(ShowModule!());
 @safe:
 
 class TABButtonIconLink : TABButtonLink {
-  mixin TABTemplate!(["btn-icon"]);
-
-  mixin(TABTemplate!("ButtonIconLink"));
+  mixin H5Template!(TABButtonIconLink, ["btn", "btn-icon"], ["role": "button"]);
+  mixin(HtmlMethods!TABButtonIconLink);
 }
 ///
 unittest {
   assert(TABButtonIconLink() == `<a class="btn btn-icon" role="button"></a>`);
+
 }

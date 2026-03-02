@@ -8,7 +8,7 @@ mixin(ShowModule!());
 @safe:
 
 class TABButtonLink : H5A {
-  mixin TABTemplate!(TABButtonLink, ["btn"], ["role": "button"]);
+  mixin H5Template!(TABButtonLink, ["btn"], ["role": "button"]);
   mixin(HtmlMethods!TABButtonLink);
 }
 ///

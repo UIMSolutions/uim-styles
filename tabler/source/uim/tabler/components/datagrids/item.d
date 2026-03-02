@@ -11,19 +11,23 @@ mixin(ShowModule!());
  * https://tabler.io/docs/datagrid
  */
 class TABDatagridItem : H5Div {
-  mixin TABTemplate!(["datagrid-item"]);
+  mixin H5Template!(TABDatagridItem, ["datagrid-item"]);
+  mixin(HtmlMethods!TABDatagridItem);
 
   TABDatagridItem color(string value) {
     this.addClass("bg-" ~ value);
     return this;
   }
-
-  static TABDatagridItem opCall() {
-    return new TABDatagridItem;
-  }
 }
 ///
 unittest {
   assert(TABDatagridItem() == `<div class="datagrid-item"></div>`);
-  // assert(TABDatagridItem().color("blue") == `<div class="bg-blue datagrid-item"></div>`);
+  assert(TABDatagridItem(["testclass"]) == `<div class="datagrid-item testclass"></div>`);
+  assert(TABDatagridItem(["a": "b"]) == `<div class="datagrid-item" a="b"></div>`);
+  assert(TABDatagridItem(["testclass"], ["a": "b"]) == `<div class="datagrid-item testclass" a="b"></div>`);
+
+  assert(TABDatagridItem("Hello") == `<div class="datagrid-item">Hello</div>`);
+  assert(TABDatagridItem(["testclass"], "Hello") == `<div class="datagrid-item testclass">Hello</div>`);
+  assert(TABDatagridItem(["a": "b"], "Hello") == `<div class="datagrid-item" a="b">Hello</div>`);
+  assert(TABDatagridItem(["testclass"], ["a": "b"], "Hello") == `<div class="datagrid-item testclass" a="b">Hello</div>`);
 }

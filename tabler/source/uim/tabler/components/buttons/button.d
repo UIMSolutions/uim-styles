@@ -27,8 +27,8 @@ mixin(ShowModule!());
   * @see https://docs.tabler.io/ui/components/buttons
   */
 class TABButton : H5Button {
-  mixin TABTemplate!(TABButton, ["btn"], ["type": "button"]);
-  mixin(HtmlMethods!H5Button);
+  mixin H5Template!(TABButton, ["btn"], ["type": "button"]);
+  mixin(HtmlMethods!TABButton);
 }
 ///
 unittest {

@@ -9,7 +9,7 @@ import uim.tabler;
  * https://tabler.io/docs/datagrid
  */
 class TABDatagrid : H5Div {
-  mixin TABTemplate!(TABDatagrid, ["datagrid"]);
+  mixin H5Template!(TABDatagrid, ["datagrid"]);
   mixin(HtmlMethods!TABDatagrid);
 
   TABDatagrid color(string value) {
@@ -20,5 +20,14 @@ class TABDatagrid : H5Div {
 ///
 unittest {
   assert(TABDatagrid() == `<div class="datagrid"></div>`);
-  // assert(TABDatagrid().color("blue") == `<div class="bg-blue datagrid"></div>`);
+  assert(TABDatagrid(["testclass"]) == `<div class="datagrid testclass"></div>`);
+  assert(TABDatagrid(["a": "b"]) == `<div class="datagrid" a="b"></div>`);
+  assert(TABDatagrid(["testclass"], ["a": "b"]) == `<div class="datagrid testclass" a="b"></div>`);
+
+  assert(TABDatagrid("Hello") == `<div class="datagrid">Hello</div>`);
+  assert(TABDatagrid(["testclass"], "Hello") == `<div class="datagrid testclass">Hello</div>`);
+  assert(TABDatagrid(["a": "b"], "Hello") == `<div class="datagrid" a="b">Hello</div>`);
+  assert(TABDatagrid(["testclass"], ["a": "b"], "Hello") == `<div class="datagrid testclass" a="b">Hello</div>`);
+
+  assert(TABDatagrid().color("blue") == `<div class="bg-blue datagrid"></div>`);
 }
