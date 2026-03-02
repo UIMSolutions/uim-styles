@@ -1,6 +1,7 @@
 module uim.tabler.components.alerts.icon;
 
 import uim.tabler;
+import uim.html.udas.udas;
 
 mixin(ShowModule!());
 

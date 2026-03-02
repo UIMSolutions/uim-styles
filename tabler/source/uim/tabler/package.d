@@ -1,6 +1,7 @@
 module uim.tabler;
 
 public {
+  import uim.html;
   import uim.style;
 }
 

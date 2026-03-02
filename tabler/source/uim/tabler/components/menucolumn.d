@@ -9,7 +9,8 @@ import uim.tabler;
  * https://tabler.io/docs/components/dropdown#dropdown-menu-column
  */
 class TABDropdownMenuColumn : H5Div {
-  mixin TABTemplate!(["dropdown-menu-column"]);
+  mixin H5Template!(TABDropdownMenuColumn, ["dropdown-menu-column"]);
+  mixin(HtmlMethods!TABDropdownMenuColumn);
 
   TABDropdownMenuColumn label(string value) {
     this.attribute("aria-labelledby", value);
@@ -49,15 +50,11 @@ class TABDropdownMenuColumn : H5Div {
   //   addContent(TABDropdownText);
   //   return this;
   // }
-
-  mixin(TABTemplate!("DropdownMenuColumn"));
-  mixin H5Template!TABCardButton;
 }
 ///
 unittest {
   assert(TABDropdownMenuColumn() == `<div class="dropdown-menu-column"></div>`);
-  assert(TABDropdownMenuColumn(
-      ["testclass"]) == `<div class="dropdown-menu-column testclass"></div>`);
+  assert(TABDropdownMenuColumn(["testclass"]) == `<div class="dropdown-menu-column testclass"></div>`);
   assert(TABDropdownMenuColumn(["a": "b"]) == `<div class="dropdown-menu-column" a="b"></div>`);
   assert(TABDropdownMenuColumn(["testclass"], ["a": "b"]) == `<div class="dropdown-menu-column testclass" a="b"></div>`);
 

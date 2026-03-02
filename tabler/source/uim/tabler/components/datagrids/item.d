@@ -30,4 +30,6 @@ unittest {
   assert(TABDatagridItem(["testclass"], "Hello") == `<div class="datagrid-item testclass">Hello</div>`);
   assert(TABDatagridItem(["a": "b"], "Hello") == `<div class="datagrid-item" a="b">Hello</div>`);
   assert(TABDatagridItem(["testclass"], ["a": "b"], "Hello") == `<div class="datagrid-item testclass" a="b">Hello</div>`);
+
+  assert(TABDatagridItem().color("blue") == `<div class="bg-blue datagrid-item"></div>`);
 }

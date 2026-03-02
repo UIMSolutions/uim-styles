@@ -15,7 +15,7 @@ mixin(ShowModule!());
   * assert(avatar == `<span class="avatar avatar-md avatar-rounded">John Doe</span>`);  
   */
 class TABAvatar : H5Span {
-  mixin TABTemplate!(TABAvatar, ["avatar"]);
+  mixin H5Template!(TABAvatar, ["avatar"]);
   mixin(HtmlMethods!TABAvatar);
 }
 ///
