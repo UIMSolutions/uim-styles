@@ -11,10 +11,8 @@ mixin(ShowModule!());
  * https://tabler.io/docs/card#card-buttons
  */
 class TABCardButton : H5A {
-  mixin TABTemplate!(["card-btn"]);
-
-  mixin(TABTemplate!("CardButton"));
-  mixin H5Template!TABCardButton;
+  mixin H5Template!(TABCardButton, ["card-btn"]);
+  mixin(HtmlMethods!TABCardButton);
 }
 ///
 unittest {
@@ -29,4 +27,5 @@ unittest {
   assert(TABCardButton(["testclass"], ["a":"b"], "Hello") == `<a class="card-btn testclass" a="b">Hello</a>`);
 
   assert(TABCardButton().href("https://example.com") == `<a class="card-btn" href="https://example.com"></a>`);
+  assert(TABCardButton().target("_blank") == `<a class="card-btn" target="_blank"></a>`);
 }

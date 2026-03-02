@@ -11,9 +11,8 @@ mixin(ShowModule!());
  * https://tabler.io/docs/forms#image-checks
  */
 class TABImageCheckFigure : H5Span {
-  mixin TABTemplate!( ["form-imagecheck-figure"]);
-
-  mixin(TABTemplate!("ImageCheckFigure"));
+  mixin H5Template!(TABImageCheckFigure, ["form-imagecheck-figure"]);
+  mixin(HtmlMethods!TABImageCheckFigure);
 }
 ///
 unittest {

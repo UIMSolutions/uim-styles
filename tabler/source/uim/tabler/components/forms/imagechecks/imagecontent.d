@@ -11,11 +11,18 @@ mixin(ShowModule!());
  * https://tabler.io/docs/forms#image-checks
  */
 class TABImageCheckImageContent : H5Span {
-  mixin TABTemplate!( ["form-imagecheck-image"]);
-
-  mixin(TABTemplate!("ImageCheckImageContent"));
+  mixin H5Template!(TABImageCheckImageContent, ["form-imagecheck-image"]);
+  mixin(HtmlMethods!TABImageCheckImageContent);
 }
 ///
 unittest {
   assert(TABImageCheckImageContent() == `<span class="form-imagecheck-image"></span>`);
+  assert(TABImageCheckImageContent(["testclass"]) == `<span class="form-imagecheck-image testclass"></span>`);  
+  assert(TABImageCheckImageContent(["a": "b"]) == `<span class="form-imagecheck-image" a="b"></span>`);
+  assert(TABImageCheckImageContent(["testclass"], ["a": "b"]) == `<span class="form-imagecheck-image testclass" a="b"></span>`);
+
+  assert(TABImageCheckImageContent("Hello") == `<span class="form-imagecheck-image">Hello</span>`);
+  assert(TABImageCheckImageContent(["testclass"], "Hello") == `<span class="form-imagecheck-image testclass">Hello</span>`);
+  assert(TABImageCheckImageContent(["a": "b"], "Hello") == `<span class="form-imagecheck-image" a="b">Hello</span>`);
+  assert(TABImageCheckImageContent(["testclass"], ["a": "b"], "Hello") == `<span class="form-imagecheck-image testclass" a="b">Hello</span>`);
 }
