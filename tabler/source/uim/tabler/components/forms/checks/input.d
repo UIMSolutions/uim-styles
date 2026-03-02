@@ -11,13 +11,15 @@ mixin(ShowModule!());
  * https://tabler.io/docs/forms#checks
  */
 class TABFormCheckInput : H5Input {
-  mixin TABTemplate!(["form-check-input"]);
-
-  mixin(TABTemplate!("FormCheckInput"));
+  mixin H5Template!(TABFormCheckInput, ["form-check-input"]);
+  mixin(HtmlMethods!TABFormCheckInput);
 }
 ///
 unittest {
   assert(TABFormCheckInput() == `<input class="form-check-input" />`);
+  assert(TABFormCheckInput(["testclass"]) == `<input class="form-check-input testclass" />`);
+  assert(TABFormCheckInput(["a": "b"]) == `<input class="form-check-input" a="b" />`);
+  assert(TABFormCheckInput(["testclass"], ["a": "b"]) == `<input class="form-check-input testclass" a="b" />`);
 }
 
 

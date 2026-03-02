@@ -11,11 +11,13 @@ mixin(ShowModule!());
  * https://tabler.io/docs/forms#image-checks
  */
 class TABImageCheckInput : H5Input {
-  mixin TABTemplate!(["form-imagecheck-input"]);
-
-  mixin(TABTemplate!("ImageCheckInput"));
+  mixin H5Template!(TABImageCheckInput, ["form-imagecheck-input"]);
+  mixin(HtmlMethods!TABImageCheckInput);
 }
 ///
 unittest {
   assert(TABImageCheckInput() == `<input class="form-imagecheck-input" />`);
+  assert(TABImageCheckInput(["testclass"]) == `<input class="form-imagecheck-input testclass" />`);
+  assert(TABImageCheckInput(["a": "b"]) == `<input class="form-imagecheck-input" a="b" />`);
+  assert(TABImageCheckInput(["testclass"], ["a": "b"]) == `<input class="form-imagecheck-input testclass" a="b" />`);
 }

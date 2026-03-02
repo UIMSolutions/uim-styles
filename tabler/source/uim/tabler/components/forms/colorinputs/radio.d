@@ -11,13 +11,15 @@ mixin(ShowModule!());
  * https://tabler.io/docs/forms#color-inputs
  */
 class TABFormColorInputRadio : H5Radio {
-  mixin TABTemplate!(["form-colorinput-input"]);
-  
-  mixin(TABTemplate!("FormColorInputRadio"));
+  mixin H5Template!(TABFormColorInputRadio, ["form-colorinput-input"]);
+  mixin(HtmlMethods!TABFormColorInputRadio);
 }
 ///
 unittest {
   assert(TABFormColorInputRadio() == `<input class="form-colorinput-input" type="radio" />`);
+  assert(TABFormColorInputRadio(["testclass"]) == `<input class="form-colorinput-input testclass" type="radio" />`);
+  assert(TABFormColorInputRadio(["a": "b"]) == `<input class="form-colorinput-input" a="b" type="radio" />`);
+  assert(TABFormColorInputRadio(["testclass"], ["a": "b"]) == `<input class="form-colorinput-input testclass" a="b" type="radio" />`);
 }
 
 

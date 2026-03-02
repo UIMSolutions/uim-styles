@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe:
 
 class TABButtonIcon : H5Button {
-  mixin TABTemplate!(TABButtonIcon, ["btn", "btn-icon"], ["type": "button"]);
+  mixin H5Template!(TABButtonIcon, ["btn", "btn-icon"], ["type": "button"]);
   mixin(HtmlMethods!TABButtonIcon);
 }
 ///
