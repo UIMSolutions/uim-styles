@@ -57,8 +57,7 @@ class BS5Button : H5Button {
   }
   ///
   unittest {
-    // assert(BS5Button.outline(
-        "primary") == `<button class="btn btn-outline-primary" type="button"></button>`);
+    // assert(BS5Button.outline("primary") == `<button class="btn btn-outline-primary" type="button"></button>`);
   }
 
   BS5Button size(string value) {

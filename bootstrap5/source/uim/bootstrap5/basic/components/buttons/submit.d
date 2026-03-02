@@ -36,8 +36,7 @@ class BS5ButtonSubmit : H5Button {
   }
   ///
   unittest {
-    // assert(BS5ButtonSubmit.color(
-        "primary") == `<button class="btn btn-primary" type="submit"></button>`);
+    // assert(BS5ButtonSubmit.color("primary") == `<button class="btn btn-primary" type="submit"></button>`);
   }
 
   // Set button to disabled
@@ -58,8 +57,7 @@ class BS5ButtonSubmit : H5Button {
   }
   ///
   unittest {
-    // assert(BS5ButtonSubmit.outline(
-        "primary") == `<button class="btn btn-outline-primary" type="submit"></button>`);
+    // assert(BS5ButtonSubmit.outline("primary") == `<button class="btn btn-outline-primary" type="submit"></button>`);
   }
 
   BS5ButtonSubmit size(string value) {

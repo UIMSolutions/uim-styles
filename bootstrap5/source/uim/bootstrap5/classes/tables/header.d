@@ -6,7 +6,7 @@ mixin(ShowModule!());
 
 @safe: 
 class BS5TableHeader : H5Thead {
-  mixin BS5This!();
+  mixin H5Template!(BS5TableHeader, null, null);
 
 //   // mixin(MyContent!("row", "BS5TableRow"));
 //   // mixin(MyContent!("tr", "BS5TableRow"));
@@ -16,8 +16,6 @@ class BS5TableHeader : H5Thead {
 //     // assert(BS5TableHeader.row.row == `<thead><tr></tr><tr></tr></thead>`);
 //     // assert(BS5TableHeader.tr() == `<thead><tr></tr></thead>`);
 //   }
-
-  mixin(BS5Calls!("TableHeader"));
 }
 ///
 unittest {

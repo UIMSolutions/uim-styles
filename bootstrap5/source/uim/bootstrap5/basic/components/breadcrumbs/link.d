@@ -7,11 +7,7 @@ mixin(ShowModule!());
 @safe:
 
 class BS5BreadcrumbLink : H5A {
-  mixin BS5This!();
-
-  static BS5BreadcrumbLink opCall() {
-    return new BS5BreadcrumbLink;
-  }
+  mixin H5Template!(BS5BreadcrumbLink, null, null);
 }
 ///
 unittest {

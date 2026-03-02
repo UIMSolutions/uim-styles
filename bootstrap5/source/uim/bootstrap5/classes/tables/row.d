@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe: 
 
 class BS5TableRow : H5Tr {
-  mixin BS5This!();
+  mixin H5Template!(BS5TableRow, null, null );
 
 //   /// Adding a header cell
 //   // mixin(MyContent!("th", "H5Th"));
@@ -48,7 +48,6 @@ class BS5TableRow : H5Tr {
 //     return super.renderHTML;
 //   }*/
 
-  mixin(BS5Calls!"TableRow");
 } 
 ///
 unittest {

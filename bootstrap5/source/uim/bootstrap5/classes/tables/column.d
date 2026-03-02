@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe:
 
 class BS5TableColumn : H5Th {
-  mixin BS5This!(null, ["scope": "col"]);
+  mixin H5Template!(BS5TableColumn, null, ["scope": "col"]);
 
   // mixin(TProperty!("string", "key"));
   // mixin(TProperty!("string", "title"));
@@ -22,7 +22,6 @@ class BS5TableColumn : H5Th {
   //   return super.renderHTML;
   // }
 
-  mixin(BS5Calls!"TableColumn");
 }
 ///
 unittest {
