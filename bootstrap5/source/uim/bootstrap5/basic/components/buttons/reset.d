@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe:
 
 class BS5ButtonReset : H5Button {
-  mixin BS5This!(["btn"], ["type": "reset"]);
+  mixin H5Template!(BS5ButtonReset, ["btn"], ["type": "reset"]);
 
   // // Set button to active state
   // BS5ButtonReset active(bool mode = true) {
@@ -70,10 +70,16 @@ class BS5ButtonReset : H5Button {
   // unittest {
   //   // assert(BS5ButtonReset.size("lg") == `<button class="btn btn-lg" type="reset"></button>`);
   // }
-
-  mixin(BS5Calls!("ButtonReset"));
 }
 ///
 unittest {
-  // // assert(BS5ButtonReset == `<button class="btn" type="button"></button>`);
+  assert(BS5ButtonReset() == `<button class="btn" type="reset"></button>`);
+  assert(BS5ButtonReset(["testclass"]) == `<button class="btn testclass" type="reset"></button>`);
+  assert(BS5ButtonReset(["a": "b"]) == `<button class="btn" a="b" type="reset"></button>`);
+  assert(BS5ButtonReset(["testclass"], ["a": "b"]) == `<button class="btn testclass" a="b" type="reset"></button>`);
+
+  assert(BS5ButtonReset("Hello") == `<button class="btn" type="reset">Hello</button>`);
+  assert(BS5ButtonReset(["testclass"], "Hello") == `<button class="btn testclass" type="reset">Hello</button>`);
+  assert(BS5ButtonReset(["a": "b"], "Hello") == `<button class="btn" a="b" type="reset">Hello</button>`);
+  assert(BS5ButtonReset(["testclass"], ["a": "b"], "Hello") == `<button class="btn testclass" a="b" type="reset">Hello</button>`); 
 }

@@ -7,11 +7,10 @@ mixin(ShowModule!());
 @safe: 
 
 class BS5AccordionHeader : H5H2 {
-  mixin BS5This!(["accordion-header"]);
+  mixin H5Template!(BS5AccordionHeader, ["accordion-header"], null);
 
   // // mixin(MyContent!("button", "BS5AccordionButton"));
 
-  mixin(BS5Calls!("AccordionHeader"));
 }
 
 ///

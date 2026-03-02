@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe:
 
 class BS5BreadcrumbList : H5Ol {
-  mixin BS5This!(["breadcrumb"], ["aria-label": "breadcrumbs"]);
+  mixin H5Template!(BS5BreadcrumbList, ["breadcrumb"], ["aria-label": "breadcrumbs"]);
 
   // // mixin(MyContent!("item", "BS5BreadcrumbItem"));
   // ///
@@ -22,7 +22,6 @@ class BS5BreadcrumbList : H5Ol {
   //   // assert(BS5BreadcrumbList.link == `<ol class="breadcrumb" aria-label="breadcrumbs"><li class="breadcrumb-item"><a></a></li></ol>`);
   // }
 
-  mixin(BS5Calls!("BreadcrumbList"));
 }
 ///
 unittest {

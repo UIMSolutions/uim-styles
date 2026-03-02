@@ -8,9 +8,7 @@ mixin(ShowModule!());
 
 /// Button for accordion item header
 class BS5AccordionButton : H5Button {
-  mixin BS5This!(["accordion-button"], ["type":"button"]);
-
-  mixin(BS5Calls!("AccordionButton"));
+  mixin H5Template!(BS5AccordionButton, ["accordion-button"], ["type":"button"]);
 }
 ///
 unittest {

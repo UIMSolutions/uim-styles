@@ -12,7 +12,8 @@ mixin(ShowModule!());
  * Authors: UI Manufaktur UG, https://ui-manufaktur.com 
  */
 class BS5BadgeLink : H5A {
-  mixin BS5This!(["badge"]);
+  mixin H5Template!(BS5BadgeLink, ["badge"], null);
+  mixin(HtmlMethods!BS5BadgeLink);
 
   // Color of badge
   // auto color(string name) {
@@ -34,7 +35,6 @@ class BS5BadgeLink : H5A {
     // assert(BS5BadgeLink.pill(true) == `<a class="badge badge-pill"></a>`);
   }
 
-  mixin(BS5Calls!("BadgeLink"));
 }
 ///
 unittest {

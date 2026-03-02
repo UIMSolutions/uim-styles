@@ -7,9 +7,7 @@ mixin(ShowModule!());
 @safe:
 
 class BS5AccordionItem : H5Div {
-  mixin BS5This!(["accordion-item"]);
-
-  mixin(BS5Calls!("AccordionItem"));
+  mixin H5Template!(BS5AccordionItem, ["accordion-item"], null);
 }
 ///
 unittest {

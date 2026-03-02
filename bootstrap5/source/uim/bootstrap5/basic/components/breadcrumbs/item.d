@@ -8,7 +8,7 @@ mixin(ShowModule!());
 
 // Bootstrap 5 Breadcrumb Item
 class BS5BreadcrumbItem : H5Li {
-  mixin BS5This!(["breadcrumb-item"]);
+  mixin H5Template!(BS5BreadcrumbItem, ["breadcrumb-item"], null);
 
   // BS5BreadcrumbItem active(bool mode = true) {
   //   if (mode)
@@ -36,7 +36,6 @@ class BS5BreadcrumbItem : H5Li {
   //   // assert(BS5BreadcrumbItem.link == `<li class="breadcrumb-item"><a></a></li>`);
   // }
 
-  mixin(BS5Calls!("BreadcrumbItem"));
 }
 ///
 unittest {

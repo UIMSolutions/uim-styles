@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe:
 
 class BS5Button : H5Button {
-  mixin BS5This!(["btn"], ["type": "button"]);
+  mixin H5Template!(BS5Button, ["btn"], ["type": "button"]);
 
   // Set button to active state
   BS5Button active(bool mode = true) {
@@ -69,7 +69,6 @@ class BS5Button : H5Button {
     // assert(BS5Button.size("lg") == `<button class="btn btn-lg" type="button"></button>`);
   }
 
-  mixin(BS5Calls!("Button"));
 }
 
 ///
