@@ -35,10 +35,10 @@ unittest {
   assert(TABButton() == `<button class="btn" type="button"></button>`);
   assert(TABButton(["testclass"]) == `<button class="btn testclass" type="button"></button>`);
   assert(TABButton(["a":"b"]) == `<button class="btn" a="b" type="button"></button>`);
-  assert(TABButton(["testclass"], ["a":"b"]) == `<button class="btn testclass" type="button" a="b"></button>`);
+  assert(TABButton(["testclass"], ["a":"b"]) == `<button class="btn testclass" a="b" type="button"></button>`);
 
   assert(TABButton("Hello") == `<button class="btn" type="button">Hello</button>`);
   assert(TABButton(["testclass"], "Hello") == `<button class="btn testclass" type="button">Hello</button>`);
-  assert(TABButton(["a":"b"], "Hello") == `<button class="btn" type="button" a="b">Hello</button>`);
-  assert(TABButton(["testclass"], ["a":"b"], "Hello") == `<button class="btn testclass" type="button" a="b">Hello</button>`);
+  assert(TABButton(["a":"b"], "Hello") == `<button class="btn" a="b" type="button">Hello</button>`);
+  assert(TABButton(["testclass"], ["a":"b"], "Hello") == `<button class="btn testclass" a="b" type="button">Hello</button>`);
 }

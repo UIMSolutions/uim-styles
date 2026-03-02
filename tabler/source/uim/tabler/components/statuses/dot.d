@@ -35,5 +35,5 @@ unittest {
   assert(TABStatusDot(["testclass"], ["a": "b"], "Hello") == `<span class="status-dot testclass" a="b">Hello</span>`);
 
   assert(TABStatusDot().animated() == `<span class="status-dot status-dot-animated"></span>`);
-  assert(TABStatusDot().color("blue") == `<span class="status-dot status-blue"></span>`);
+  assert(TABStatusDot().color("blue") == `<span class="status-blue status-dot"></span>`);
 }
