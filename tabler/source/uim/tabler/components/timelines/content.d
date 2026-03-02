@@ -9,11 +9,18 @@ import uim.tabler;
  * https://tabler.io/docs/components/timeline#content
  */ 
 class TABTimelineContent : H5Div {
-  mixin TABTemplate!(["list-timeline-content"]);
-
-  mixin(TABTemplate!("TimelineContent"));
+  mixin H5Template!(TABTimelineContent, ["list-timeline-content"]);
+  mixin(HtmlMethods!TABTTimelineContent);
 }
 ///
 unittest {
   assert(TABTimelineContent() == `<div class="list-timeline-content"></div>`);
+  assert(TABTimelineContent(["testclass"]) == `<div class="list-timeline-content testclass"></div>`);
+  assert(TABTimelineContent(["a": "b"]) == `<div class="list-timeline-content" a="b"></div>`);
+  assert(TABTimelineContent(["testclass"], ["a": "b"]) == `<div class="list-timeline-content testclass" a="b"></div>`);
+
+  assert(TABTimelineContent("Hello") == `<div class="list-timeline-content">Hello</div>`);
+  assert(TABTimelineContent(["testclass"], "Hello") == `<div class="list-timeline-content testclass">Hello</div>`);
+  assert(TABTimelineContent(["a": "b"], "Hello") == `<div class="list-timeline-content" a="b">Hello</div>`);
+  assert(TABTimelineContent(["testclass"], ["a": "b"], "Hello") == `<div class="list-timeline-content testclass" a="b">Hello</div>`);
 }
