@@ -11,7 +11,7 @@ mixin(ShowModule!());
  * https://tabler.io/docs/forms#image-checks
  */
 class TABImageCheckLabel : H5Label {
-  mixin TABThis!(["form-imagecheck"]);
+  mixin TABTemplate!(["form-imagecheck"]);
 
   mixin(TABTemplate!("ImageCheckLabel"));
 }

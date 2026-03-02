@@ -9,7 +9,7 @@ import uim.tabler;
  * https://tabler.io/docs/layout#page-header
  */
 class TABPageHeader : H5Div {
-  mixin TABThis!(["page-header"]);
+  mixin TABTemplate!(["page-header"]);
 
   mixin(TABTemplate!("PageHeader"));
 }

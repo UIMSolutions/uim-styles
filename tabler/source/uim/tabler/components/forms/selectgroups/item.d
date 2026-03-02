@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe:
 
 class TABSelectgroupItem : H5Label {
-  mixin TABThis!(["form-selectgroup-item"]);
+  mixin TABTemplate!(["form-selectgroup-item"]);
 
   mixin(TABTemplate!("SelectgroupItem"));
 }

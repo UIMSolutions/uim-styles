@@ -11,7 +11,7 @@ mixin(ShowModule!());
  * https://tabler.io/docs/forms#checks
  */
 class TABFormCheck : H5Label {
-  mixin TABThis!(["form-check"]);
+  mixin TABTemplate!(["form-check"]);
 
   mixin(AddContentCalls!("TABFormCheck", "Input", "TABFormCheckInput"));
 

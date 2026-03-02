@@ -5,7 +5,7 @@ import uim.tabler;
 @safe:
 
 class TABNavLinkIcon : H5Span {
-  mixin TABThis!(["nav-link-icon"]);
+  mixin TABTemplate!(["nav-link-icon"]);
 
   mixin(TABTemplate!("NavLinkIcon"));
 }

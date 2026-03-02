@@ -17,7 +17,7 @@ mixin(ShowModule!());
   * ``` 
   */
 class TABButtonPill : TABButton {
-  mixin TABThis!(["btn-pill"]);
+  mixin TABTemplate!(["btn-pill"]);
 
   mixin(TABTemplate!("ButtonPill"));
 }

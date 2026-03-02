@@ -9,7 +9,7 @@ import uim.tabler;
  * https://tabler.io/docs/dropdowns#dropend
  */
 class TABDropend : H5Div {
-  mixin TABThis!(["dropend"]);
+  mixin TABTemplate!(["dropend"]);
 
   mixin(TABTemplate!("Dropend"));
 }

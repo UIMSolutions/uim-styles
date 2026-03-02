@@ -11,10 +11,10 @@ mixin(ShowModule!());
  * https://tabler.io/docs/card#card-buttons
  */
 class TABCardButton : H5A {
-  mixin TABThis!(["card-btn"]);
+  mixin TABTemplate!(["card-btn"]);
 
   mixin(TABTemplate!("CardButton"));
-  mixin(HtmlMethods!TABCardButton);
+  mixin H5Template!TABCardButton;
 }
 ///
 unittest {

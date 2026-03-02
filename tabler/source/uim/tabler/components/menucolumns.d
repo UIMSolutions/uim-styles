@@ -11,7 +11,7 @@ mixin(ShowModule!());
  * https://tabler.io/docs/components/dropdown-menu-columns/
  */
 class TABDropdownMenuColumns : H5Div {
-  mixin TABThis!(["dropdown-menu-columns"]);
+  mixin TABTemplate!(["dropdown-menu-columns"]);
 
   TABDropdownMenuColumns addColumn(TABDropdownMenuColumn column) {
     addContent(column);

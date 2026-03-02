@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe:
 
 /* class TABAccordionCollapse : H5Div {
-  mixin TABThis!(["accordion-collapse collapse"]));
+  mixin TABTemplate!(["accordion-collapse collapse"]));
 
   auto addbody_", "TABAccordionsBody"));
 }

@@ -11,7 +11,7 @@ mixin(ShowModule!());
  * https://tabler.io/docs/alerts
  */
 class TABAlertLink : H5A {
-  mixin TABThis!(["alert"], ["role":"alert"]);
+  mixin TABTemplate!(["alert"], ["role":"alert"]);
 
   TABAlertLink color(string value) {
     this.addClass(value);

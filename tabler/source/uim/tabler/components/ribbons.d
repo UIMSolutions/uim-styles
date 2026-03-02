@@ -9,7 +9,7 @@ import uim.tabler;
  * https://tabler.io/docs/components/ribbon
  */
 class TABRibbon : H5Div {
-  mixin TABThis!(["ribbon"]);
+  mixin TABTemplate!(["ribbon"]);
 
   mixin(TABTemplate!("Ribbon"));
 }

@@ -8,7 +8,7 @@ mixin(ShowModule!());
 
 /// NavLinkTitle is used to create a title for a nav link. It is used in the NavLink component.
 class TABNavLinkTitle : H5Span {
-  mixin TABThis!(["nav-link-title"]);
+  mixin TABTemplate!(["nav-link-title"]);
 
   mixin(TABTemplate!("NavLinkTitle"));
 }

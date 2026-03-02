@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe:
 
 class TABEmptyAction : H5Div {
-  mixin TABThis!(["empty-action"]);
+  mixin TABTemplate!(["empty-action"]);
 
   mixin(TABTemplate!("EmptyAction"));
 }

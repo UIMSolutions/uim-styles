@@ -11,7 +11,7 @@ mixin(ShowModule!());
  * https://tabler.io/docs/forms#checks
  */
 class TABFormCheckInput : H5Input {
-  mixin TABThis!(["form-check-input"]);
+  mixin TABTemplate!(["form-check-input"]);
 
   mixin(TABTemplate!("FormCheckInput"));
 }

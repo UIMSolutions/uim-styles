@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe:
 
 class TABStatusDot : H5Span {
-  mixin TABThis!(["status-dot"]);
+  mixin TABTemplate!(["status-dot"]);
 
   TABStatusDot animated(bool value = true) {
     if (value)

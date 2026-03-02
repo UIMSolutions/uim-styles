@@ -11,7 +11,7 @@ mixin(ShowModule!());
   * https://tabler.io/docs/empty
   */
 class TABEmpty : H5Div {
-  mixin TABThis!(["empty"]);
+  mixin TABTemplate!(["empty"]);
 
   TABEmpty addAction() {
     addContent(new TABEmptyAction());

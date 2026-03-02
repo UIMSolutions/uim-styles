@@ -9,7 +9,7 @@ import uim.tabler;
  * https://tabler.io/docs/datagrid
  */
 class TABDatagrid : H5Div {
-  mixin TABThis!(["datagrid"]);
+  mixin TABTemplate!(["datagrid"]);
 
   TABDatagrid color(string value) {
     this.addClass("bg-" ~ value);

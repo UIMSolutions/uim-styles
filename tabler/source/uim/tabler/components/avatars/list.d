@@ -5,7 +5,7 @@ import uim.tabler;
 @safe:
 
 class TABAvatarList : H5Div {
-  mixin TABThis!(["avatar-list"]);
+  mixin TABTemplate!(["avatar-list"]);
 
   TABAvatarList addAvatar(TABAvatar avatar) {
     addContent(avatar);

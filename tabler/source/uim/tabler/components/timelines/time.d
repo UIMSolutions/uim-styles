@@ -11,7 +11,7 @@ mixin(ShowModule!());
  * https://tabler.io/docs/components/timeline#time
  */
 class TABTimelineTime : H5Div {
-  mixin TABThis!(["list-timeline-time"]);
+  mixin TABTemplate!(["list-timeline-time"]);
 
   mixin(TABTemplate!("TimelineTime"));
 }

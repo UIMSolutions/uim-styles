@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe:
 
 class TABButtonSquareLink : TABButtonLink {
-  mixin TABThis!(["btn-square"]);
+  mixin TABTemplate!(["btn-square"]);
 
   mixin(TABTemplate!("ButtonSquareLink"));
 }

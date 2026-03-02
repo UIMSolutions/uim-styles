@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe:
 
 class TABStatus : H5Span {
-  mixin TABThis!(["status"]);
+  mixin TABTemplate!(["status"]);
 
   TABStatus color(string value) {
     this.addClass("status-" ~ value);

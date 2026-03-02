@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe:
 
 class TABInputIcon : H5Div {
-  mixin TABThis!(["input-icon"]);
+  mixin TABTemplate!(["input-icon"]);
 
   mixin(TABTemplate!("InputIcon"));
 }

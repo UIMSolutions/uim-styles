@@ -9,7 +9,7 @@ import uim.tabler;
  * https://tabler.io/docs/components/timeline#content
  */ 
 class TABTimelineContent : H5Div {
-  mixin TABThis!(["list-timeline-content"]);
+  mixin TABTemplate!(["list-timeline-content"]);
 
   mixin(TABTemplate!("TimelineContent"));
 }

@@ -11,7 +11,7 @@ mixin(ShowModule!());
  * https://tabler.io/docs/card#card-tabs
  */
 class TABCardTabs : H5Div {
-  mixin TABThis!(["card-tabs"]);
+  mixin TABTemplate!(["card-tabs"]);
 
   mixin(TABTemplate!("CardTabs"));
 }

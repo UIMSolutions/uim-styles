@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe:
 
 class TABStatusIndicator : H5Span {
-  mixin TABThis!(["status-indicator"]);
+  mixin TABTemplate!(["status-indicator"]);
 
   override bool initialize(Json[string] initData = null) {
     super.initialize(initData);

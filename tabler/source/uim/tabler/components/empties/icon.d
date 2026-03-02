@@ -11,7 +11,7 @@ mixin(ShowModule!());
  * https://tabler.io/docs/empty#icon
  */
 class TABEmptyIcon : H5Div {
-  mixin TABThis!(["empty-icon"]);
+  mixin TABTemplate!(["empty-icon"]);
 
   mixin(TABTemplate!("EmptyIcon"));
 }

@@ -11,7 +11,7 @@ mixin(ShowModule!());
  * https://tabler.io/docs/alerts
  */
 class TABAlertTitle : H5H4 {
-  mixin TABThis!(["alert-title"]);
+  mixin TABTemplate!(["alert-title"]);
 
   mixin(TABTemplate!("AlertTitle"));
 }

@@ -11,7 +11,7 @@ mixin(ShowModule!());
  * https://tabler.io/docs/components/avatar
  */
 class TABAvatar : H5Span {
-  mixin TABThis!(["avatar"]);
+  mixin TABTemplate!(["avatar"]);
 
   mixin(TABTemplate!("Avatar"));
 }

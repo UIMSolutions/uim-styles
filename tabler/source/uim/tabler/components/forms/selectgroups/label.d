@@ -10,7 +10,7 @@ mixin(ShowModule!());
  * https://tabler.io/docs/forms#select-groups
  */
 class TABSelectgroupLabel : H5Span {
-  mixin TABThis!(["form-selectgroup-label"]);
+  mixin TABTemplate!(["form-selectgroup-label"]);
 
   mixin(TABTemplate!("SelectgroupLabel"));
 }

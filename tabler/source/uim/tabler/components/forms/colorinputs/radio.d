@@ -11,7 +11,7 @@ mixin(ShowModule!());
  * https://tabler.io/docs/forms#color-inputs
  */
 class TABFormColorInputRadio : H5Radio {
-  mixin TABThis!(["form-colorinput-input"]);
+  mixin TABTemplate!(["form-colorinput-input"]);
   
   mixin(TABTemplate!("FormColorInputRadio"));
 }

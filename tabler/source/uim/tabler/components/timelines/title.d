@@ -9,7 +9,7 @@ import uim.tabler;
  * https://tabler.io/docs/components/timeline#title
  */
 class TABTimelineTitle : H5P {
-  mixin TABThis!(["list-timeline-title"]);
+  mixin TABTemplate!(["list-timeline-title"]);
 
   mixin(TABTemplate!("TimelineTitle"));
 }

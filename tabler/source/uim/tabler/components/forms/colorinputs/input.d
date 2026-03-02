@@ -11,7 +11,7 @@ mixin(ShowModule!());
  * https://tabler.io/docs/forms#color-inputs
  */
 class TABFormColorInput : H5Input {
-  mixin TABThis!(["form-colorinput-input"]);
+  mixin TABTemplate!(["form-colorinput-input"]);
 
   mixin(TABTemplate!("FormColorInput"));
 }

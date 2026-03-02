@@ -9,7 +9,7 @@ import uim.tabler;
  * https://tabler.io/docs/layout#footer
  */
 class TABFooter : H5Footer {
-  mixin TABThis!(["footer"]);
+  mixin TABTemplate!(["footer"]);
 
   mixin(TABTemplate!("Footer"));
 }

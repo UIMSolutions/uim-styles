@@ -11,7 +11,7 @@ mixin(ShowModule!());
  * https://tabler.io/docs/datagrid
  */
 class TABDatagridItem : H5Div {
-  mixin TABThis!(["datagrid-item"]);
+  mixin TABTemplate!(["datagrid-item"]);
 
   TABDatagridItem color(string value) {
     this.addClass("bg-" ~ value);
