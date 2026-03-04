@@ -51,7 +51,16 @@ class BS5TableRow : H5Tr {
 } 
 ///
 unittest {
-  // assert(BS5TableRow() == "<tr></tr>");
+  assert(BS5TableRow() == "<tr></tr>");
+  assert(BS5TableRow(["testclass"]) == `<tr class="testclass"></tr>`);
+  assert(BS5TableRow(["a":"b"]) == `<tr a="b"></tr>`);
+  assert(BS5TableRow(["testclass"], ["a":"b"]) == `<tr class="testclass" a="b"></tr>`);
+
+  assert(BS5TableRow("Hello") == "<tr>Hello</tr>");
+  assert(BS5TableRow(["testclass"], "Hello") == `<tr class="testclass">Hello</tr>`);
+  assert(BS5TableRow(["a":"b"], "Hello") == `<tr a="b">Hello</tr>`);
+  assert(BS5TableRow(["testclass"], ["a":"b"], "Hello") == `<tr class="testclass" a="b">Hello</tr>`);
+
   //// assert(BS5TableRow().values(["a","b"]) == `<tr><td>a</td><td>b</td></tr>`);
 }
 

@@ -7,11 +7,12 @@ mixin(ShowModule!());
 @safe:  
 
 class BS5Checkbox : BS5Input {
-  mixin BS5This!(null, ["type":"checkbox"]);
-
-  mixin(BS5Calls!("Checkbox"));
+  mixin BS5Template!(BS5Checkbox, null, ["type":"checkbox"]);
 }
 ///
 unittest {
-  // assert(BS5Checkbox == `<input class="form-control" type="checkbox">`);
+  assert(BS5Checkbox == `<input class="form-control" type="checkbox">`);
+  assert(BS5Checkbox(["testclass"]) == `<input class="form-control testclass" type="checkbox">`);
+  assert(BS5Checkbox(["a":"b"]) == `<input class="form-control" type="checkbox" a="b">`);
+  assert(BS5Checkbox(["testclass"], ["a":"b"]) == `<input class="form-control testclass" type="checkbox" a="b">`);
 }

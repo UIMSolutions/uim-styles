@@ -25,6 +25,15 @@ class BS5TableColumn : H5Th {
 }
 ///
 unittest {
-  // assert(BS5TableColumn() == `<th scope="col"></th>`);
+  assert(BS5TableColumn() == `<th scope="col"></th>`);
+  assert(BS5TableColumn(["testclass"]) == `<th class="testclass" scope="col"></th>`);
+  assert(BS5TableColumn(["a":"b"]) == `<th scope="col" a="b"></th>`);
+  assert(BS5TableColumn(["testclass"], ["a":"b"]) == `<th class="testclass" scope="col" a="b"></th>`);
+
+  assert(BS5TableColumn("Hello") == `<th scope="col">Hello</th>`);
+  assert(BS5TableColumn(["testclass"], "Hello") == `<th class="testclass" scope="col">Hello</th>`);
+  assert(BS5TableColumn(["a":"b"], "Hello") == `<th scope="col" a="b">Hello</th>`);
+  assert(BS5TableColumn(["testclass"], ["a":"b"], "Hello") == `<th class="testclass" scope="col" a="b">Hello</th>`);
+
   // assert(BS5TableColumn().title("xyz") == `<th scope="col">xyz</th>`);
 }

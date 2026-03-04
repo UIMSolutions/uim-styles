@@ -8,10 +8,17 @@ mixin(ShowModule!());
 
 /// Turns an image into a card background and adds text on top of the image
 class BS5CardOverlay : H5Div {
-  mixin BS5This!(["card-img-overlay"]);
-  mixin(BS5Calls!("CardOverlay"));
+  mixin H5Template!(BS5CardOverlay, ["card-img-overlay"]);
 }
 ///
 unittest {
-  // assert(BS5CardOverlay == `<div class="card-img-overlay"></div>`);
+  assert(BS5CardOverlay() == `<div class="card-img-overlay"></div>`);
+  assert(BS5CardOverlay(["testclass"]) == `<div class="card-img-overlay testclass"></div>`);
+  assert(BS5CardOverlay(["a":"b"]) == `<div class="card-img-overlay" a="b"></div>`);
+  assert(BS5CardOverlay(["testclass"], ["a":"b"]) == `<div class="card-img-overlay testclass" a="b"></div>`);
+
+  assert(BS5CardOverlay("Hello") == `<div class="card-img-overlay">Hello</div>`);
+  assert(BS5CardOverlay(["testclass"], "Hello") == `<div class="card-img-overlay testclass">Hello</div>`);
+  assert(BS5CardOverlay(["a":"b"], "Hello") == `<div class="card-img-overlay" a="b">Hello</div>`);
+  assert(BS5CardOverlay(["testclass"], ["a":"b"], "Hello") == `<div class="card-img-overlay testclass" a="b">Hello</div>`);
 }

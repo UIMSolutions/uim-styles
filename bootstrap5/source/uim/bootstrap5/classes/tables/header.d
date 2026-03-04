@@ -19,5 +19,13 @@ class BS5TableHeader : H5Thead {
 }
 ///
 unittest {
-  // assert(BS5TableHeader() == `<thead></thead>`);
+  assert(BS5TableHeader() == `<thead></thead>`);
+  assert(BS5TableHeader(["testclass"]) == `<thead class="testclass"></thead>`);
+  assert(BS5TableHeader(["a":"b"]) == `<thead a="b"></thead>`);
+  assert(BS5TableHeader(["testclass"], ["a":"b"]) == `<thead class="testclass" a="b"></thead>`);
+
+  assert(BS5TableHeader("Hello") == `<thead>Hello</thead>`);
+  assert(BS5TableHeader(["testclass"], "Hello") == `<thead class="testclass">Hello</thead>`);
+  assert(BS5TableHeader(["a":"b"], "Hello") == `<thead a="b">Hello</thead>`);
+  assert(BS5TableHeader(["testclass"], ["a":"b"], "Hello") == `<thead class="testclass" a="b">Hello</thead>`);
 }

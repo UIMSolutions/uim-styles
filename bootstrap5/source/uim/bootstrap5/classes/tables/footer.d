@@ -17,5 +17,13 @@ class BS5TableFooter : H5Tfoot {
 }
 ///
 unittest {
-  // assert(BS5TableFooter() == `<tfoot></tfoot>`);
+  assert(BS5TableFooter() == `<tfoot></tfoot>`);
+  assert(BS5TableFooter(["testclass"]) == `<tfoot class="testclass"></tfoot>`);
+  assert(BS5TableFooter(["a":"b"]) == `<tfoot a="b"></tfoot>`);
+  assert(BS5TableFooter(["testclass"], ["a":"b"]) == `<tfoot class="testclass" a="b"></tfoot>`);
+
+  assert(BS5TableFooter("Hello") == `<tfoot>Hello</tfoot>`);
+  assert(BS5TableFooter(["testclass"], "Hello") == `<tfoot class="testclass">Hello</tfoot>`);
+  assert(BS5TableFooter(["a":"b"], "Hello") == `<tfoot a="b">Hello</tfoot>`);
+  assert(BS5TableFooter(["testclass"], ["a":"b"], "Hello") == `<tfoot class="testclass" a="b">Hello</tfoot>`);
 }

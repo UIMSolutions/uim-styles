@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe: 
 
 class BS5CardImage : H5Img { // default top
-  mixin BS5This!(["card-img-top"]);
+  mixin H5TTemplate!(BS5CardImage, ["card-img-top"]);
 
   // O position(string value) { _classes = _classes.sub("card-img-top").add("card-img-"~value); return this; }
   ///
@@ -16,11 +16,14 @@ unittest {
     // assert(BS5CardImage().position("bottom") == `<img class="card-img-bottom">`);
   }
 
-  mixin(BS5Calls!("CardImage"));
 }
 ///
 unittest {
-  // assert(BS5CardImage() == `<img class="card-img-top">`);
+  assert(BS5CardImage() == `<img class="card-img-top">`);
+  assert(BS5CardImage(["testclass"]) == `<img class="card-img-top testclass">`);
+  assert(BS5CardImage(["a":"b"]) == `<img class="card-img-top" a="b">`);
+  assert(BS5CardImage(["testclass"], ["a":"b"]) == `<img class="card-img-top testclass" a="b">`);
+  
   // assert(BS5CardImage().position("top") == `<img class="card-img-top">`);
   // assert(BS5CardImage().position("bottom") == `<img class="card-img-bottom">`);
 }
