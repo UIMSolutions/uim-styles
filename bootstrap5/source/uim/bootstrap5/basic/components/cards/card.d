@@ -6,26 +6,10 @@ mixin(ShowModule!());
 
 @safe: 
 
+@CssClass("block", "card-block")
+@CssClass("inverse", "card-inverse")
 class BS5Card : H5Div {
-  mixin BS5This!(["card"]);
-
-  BS5Card block()  {
-    this.addClasses("card-block");
-    return this;
-  }
-  ///
-unittest {
-    // assert(BS5Card.block == `<div class="card card-block"></div>`);
-  }
-
-  BS5Card inverse() {
-    this.addClasses("card-inverse");
-    return this;
-  }
-  ///
-unittest {
-    // assert(BS5Card.inverse == `<div class="card card-inverse"></div>`);
-  }
+  mixin H5Template!(BS5Card, ["card"]);
 
   /// Add Image
   // mixin(MyContent!("image", "BS5CardImage"));
@@ -67,11 +51,21 @@ unittest {
 unittest {
     // // assert(BS5Card.overlay == `<div class="card"><div class="card-img-overlay"></div></div>`);
   }
-
-  mixin(BS5Calls!("Card"));
 }
 ///
 unittest {
-  // assert(BS5Card == `<div class="card"></div>`);
+  assert(BS5Card() == `<div class="card"></div>`);
+  assert(BS5Card(["testclass"]) == `<div class="card testclass"></div>`);
+  assert(BS5Card(["a":"b"]) == `<div class="card" a="b"></div>`);
+  assert(BS5Card(["testclass"], ["a":"b"]) == `<div class="card testclass" a="b"></div>`);
+
+  assert(BS5Card("Hello") == `<div class="card">Hello</div>`);
+  assert(BS5Card(["testclass"], "Hello") == `<div class="card testclass">Hello</div>`);
+  assert(BS5Card(["a":"b"], "Hello") == `<div class="card" a="b">Hello</div>`);
+  assert(BS5Card(["testclass"], ["a":"b"], "Hello") == `<div class="card testclass" a="b">Hello</div>`);
+
+  assert(BS5Card().block == `<div class="card card-block"></div>`);
+  assert(BS5Card().inverse == `<div class="card card-inverse"></div>`);
+  assert(BS5Card().block.inverse == `<div class="card card-block card-inverse"></div>`);
   // // assert(BS5Card.block.inverse == `<div class="card card-block card-inverse"></div>`);
 }
