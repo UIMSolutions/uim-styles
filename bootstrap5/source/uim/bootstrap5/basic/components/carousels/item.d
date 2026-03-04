@@ -6,17 +6,21 @@ mixin(ShowModule!());
 
 @safe: 
 
+@CssClass("active)")
 class BS5CarouselItem : H5Div {
-  mixin BS5This!(["carousel-item"]);
-
-  BS5CarouselItem active(bool mode = true) {
-    if (mode) this.addClasses("active");
-    return this;
-  }
-  mixin(BS5Calls!("CarouselItem"));
+  mixin H5Template!(BS5CarouselItem, ["carousel-item"]);
 }
 ///
 unittest {
-  // assert(BS5CarouselItem() == `<div class="carousel-item"></div>`);
-  // assert(BS5CarouselItem().active == `<div class="active carousel-item"></div>`);
+  assert(BS5CarouselItem() == `<div class="carousel-item"></div>`);
+  assert(BS5CarouselItem(["testclass"]) == `<div class="carousel-item testclass"></div>`);
+  assert(BS5CarouselItem(["a":"b"]) == `<div class="carousel-item" a="b"></div>`);
+  assert(BS5CarouselItem(["testclass"], ["a":"b"]) == `<div class="carousel-item testclass" a="b"></div>`);
+
+  assert(BS5CarouselItem("Hello") == `<div class="carousel-item">Hello</div>`);
+  assert(BS5CarouselItem(["testclass"], "Hello") == `<div class="carousel-item testclass">Hello</div>`);
+  assert(BS5CarouselItem(["a":"b"], "Hello") == `<div class="carousel-item" a="b">Hello</div>`);
+  assert(BS5CarouselItem(["testclass"], ["a":"b"], "Hello") == `<div class="carousel-item testclass" a="b">Hello</div>`);
+
+  assert(BS5CarouselItem().active == `<div class="active carousel-item"></div>`);
 }

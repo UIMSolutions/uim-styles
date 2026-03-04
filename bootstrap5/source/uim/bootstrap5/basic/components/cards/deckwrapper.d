@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe: 
 
 class BS5CardDeckwrapper : H5Div {
-  mixin BS5This!(["card-deck-wrapper"]);
+  mixin H5!(["card-deck-wrapper"]);
  
   mixin(BS5Calls!("CardDeckwrapper"));
 }

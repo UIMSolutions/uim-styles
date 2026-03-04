@@ -6,10 +6,9 @@ mixin(ShowModule!());
 
 @safe:
 
+@StringAttribute("labelledBy", "aria-labelledby");
 class BS5DropdownMenu : H5Div {
-  mixin BS5This!(["dropdown-menu"]);
-
-  // mixin(MyAttribute!("labelledBy", "aria-labelledby"));
+  mixin H5Template!(BS5DropdownMenu, ["dropdown-menu"]);
 
   auto addDivider() {
     return new BS5DropdownDivider;
@@ -34,12 +33,19 @@ class BS5DropdownMenu : H5Div {
   auto addText() {
     return new BS5DropdownText;
   }
-
-  mixin(BS5Calls!("DropdownMenu"));
 }
 ///
 unittest {
-  // assert(BS5DropdownMenu() == `<div class="dropdown-menu"></div>`);
+  assert(BS5DropdownMenu() == `<div class="dropdown-menu"></div>`);
+  assert(BS5DropdownMenu(["testclass"]) == `<div class="dropdown-menu testclass"></div>`);
+  assert(BS5DropdownMenu(["a":"b"]) == `<div class="dropdown-menu" a="b"></div>`);
+  assert(BS5DropdownMenu(["testclass"], ["a":"b"]) == `<div class="dropdown-menu testclass" a="b"></div>`);
+
+  assert(BS5DropdownMenu("Hello") == `<div class="dropdown-menu">Hello</div>`);
+  assert(BS5DropdownMenu(["testclass"], "Hello") == `<div class="dropdown-menu testclass">Hello</div>`);
+  assert(BS5DropdownMenu(["a":"b"], "Hello") == `<div class="dropdown-menu" a="b">Hello</div>`);
+  assert(BS5DropdownMenu(["testclass"], ["a":"b"], "Hello") == `<div class="dropdown-menu testclass" a="b">Hello</div>`);
+
   // assert(BS5DropdownMenu().link == `<div class="dropdown-menu"><a class="dropdown-item"></a></div>`);
   // assert(BS5DropdownMenu().form == `<div class="dropdown-menu"><form></form></div>`);
 }
