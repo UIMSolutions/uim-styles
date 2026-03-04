@@ -6,7 +6,7 @@ mixin(ShowModule!());
 
 @safe:
 
-@StringAttribute("labelledBy", "aria-labelledby");
+// @StringAttribute("labelledBy", "aria-labelledby");
 class BS5DropdownMenu : H5Div {
   mixin H5Template!(BS5DropdownMenu, ["dropdown-menu"]);
 

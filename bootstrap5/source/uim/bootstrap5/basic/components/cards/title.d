@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe:
 
 class BS5CardTitle : H5H4 {
-  mixin BS5This!(["card-title"]);
+  mixin H5Template!(BS5CardTitle, ["card-title"]);
 
   // BS5CardTitle level(uint value) {
   //   if (value > 0)
@@ -25,10 +25,19 @@ class BS5CardTitle : H5H4 {
   //   // assert(BS5CardTitle.level(2) == `<h2 class="card-title"></h2>`);
   // }
 
-  mixin(BS5Calls!("CardTitle"));
 }
 ///
 unittest {
-  // assert(BS5CardTitle == `<h4 class="card-title"></h4>`);
+  assert(BS5CardTitle() == `<h4 class="card-title"></h4>`);
+  assert(BS5CardTitle(["testclass"]) == `<h4 class="card-title testclass"></h4>`);
+  assert(BS5CardTitle(["a":"b"]) == `<h4 class="card-title" a="b"></h4>`);
+  assert(BS5CardTitle(["testclass"], ["a":"b"]) == `<h4 class="card-title testclass" a="b"></h4>`);
+
+  assert(BS5CardTitle("Hello") == `<h4 class="card-title">Hello</h4>`);
+  assert(BS5CardTitle(["testclass"], "Hello") == `<h4 class="card-title testclass">Hello</h4>`);
+  assert(BS5CardTitle(["a":"b"], "Hello") == `<h4 class="card-title" a="b">Hello</h4>`);
+  
+  assert(BS5CardTitle(["testclass"], ["a":"b"], "Hello") == `<h4 class="card-title testclass" a="b">Hello</h4>`);
+
   // assert(BS5CardTitle.content("SomeThing") == `<h4 class="card-title">SomeThing</h4>`);
 }

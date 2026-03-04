@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe: 
 
 class BS5CardBody : H5Div {
-  mixin BS5This!(["card-body"]);
+  mixin H5Template!(BS5CardBody, ["card-body"]);
 
   // mixin(MyContent!("title", "BS5CardTitle"));
   ///
@@ -20,10 +20,16 @@ unittest {
 unittest {
     // assert(BS5CardBody.text("Hallo") == `<div class="card-body"><p class="card-text">Hallo</p></div>`);
   }
-
-  mixin(BS5Calls!("CardBody"));
 }
 ///
 unittest {
-  // assert(BS5CardBody == `<div class="card-body"></div>`);
+  assert(BS5CardBody() == `<div class="card-body"></div>`);
+  assert(BS5CardBody(["testclass"]) == `<div class="card-body testclass"></div>`);
+  assert(BS5CardBody(["a":"b"]) == `<div class="card-body" a="b"></div>`);
+  assert(BS5CardBody(["testclass"], ["a":"b"]) == `<div class="card-body testclass" a="b"></div>`);
+
+  assert(BS5CardBody("Hello") == `<div class="card-body">Hello</div>`);
+  assert(BS5CardBody(["testclass"], "Hello") == `<div class="card-body testclass">Hello</div>`);
+  assert(BS5CardBody(["a":"b"], "Hello") == `<div class="card-body" a="b">Hello</div>`);
+  assert(BS5CardBody(["testclass"], ["a":"b"], "Hello") == `<div class="card-body testclass" a="b">Hello</div>`);
 }
