@@ -6,29 +6,20 @@ mixin(ShowModule!());
 
 @safe:  
 
+@StringAttribute("value")
+@StringAttribute("placeholder")
 class BS5Input : H5Input {
-  mixin BS5This!();  
-
-  // mixin(MyAttribute!"value");
-  // mixin(MyAttribute!"placeholder");
+  mixin H5Template!(BS5Input, ["form-control"]);  
 
   // auto color(string newColor) {
   //   this.addClasses("bg-"~newColor);
   //   return this;
   // }
-
-  // override void initialize () {
-  //   super.initialize();
-
-  //   this
-  //     .tag("input")
-  //     .single(true)
-  //     .classes("form-control");
-  // }
-
-  mixin(BS5Calls!("Input"));
 }
 ///
 unittest {
-  // assert(BS5Input() == `<input class="form-control" type="text">`);
+  assert(BS5Input() == `<input class="form-control" type="text" />`);
+  assert(BS5Input(["testclass"]) == `<input class="form-control testclass" type="text" />`);
+  assert(BS5Input(["a":"b"]) == `<input class="form-control" a="b" type="text" />`);
+  assert(BS5Input(["testclass"], ["a":"b"]) == `<input class="form-control testclass" a="b" type="text" />`);
 }

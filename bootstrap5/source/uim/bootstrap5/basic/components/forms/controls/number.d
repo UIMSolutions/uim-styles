@@ -6,13 +6,9 @@ mixin(ShowModule!());
 
 @safe:
 
+@StringAttribute("value")
 class BS5InputNumber : H5Input {
-  mixin BS5This!(["form-control"], ["type": "number"]);
-
-  // BS5InputNumber value(string aValue) {
-  //   attribute("value"] = to!string(aValue);
-  //   return this;
-  // }
+  mixin H5Template!(BS5InputNumber, ["form-control"], ["type": "number"]);
 
   // BS5InputNumber value(int aValue) {
   //   attribute("value"] = to!string(aValue);
@@ -29,10 +25,11 @@ class BS5InputNumber : H5Input {
   //   attribute("min"] = "0";
   //   return this;
   // }
-
-  mixin(BS5Calls!("InputNumber"));
 }
 ///
 unittest {
-  // assert(BS5InputNumber() == `<input class="form-control" type="number">`);
+  assert(BS5InputNumber() == `<input class="form-control" type="number" />`);
+  assert(BS5InputNumber(["testclass"]) == `<input class="form-control testclass" type="number" />`);
+  assert(BS5InputNumber(["a":"b"]) == `<input class="form-control" a="b" type="number" />`);
+  assert(BS5InputNumber(["testclass"], ["a":"b"]) == `<input class="form-control testclass" a="b" type="number" />`);
 }

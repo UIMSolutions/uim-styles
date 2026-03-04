@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe:  
 
 class BS5InputDateTime : BS5Input {
-  mixin BS5This!(null, ["type":"datetime-local"]);
+  mixin H5Template!(BS5InputDateTime, null, ["type":"datetime-local"]);
 
   // BS5InputDateTime value(long timestamp) {
   //   attribute("value"] = (cast(DateTime)fromTimestamp(timestamp)).toISOExtString;
@@ -23,10 +23,11 @@ class BS5InputDateTime : BS5Input {
   //   attribute("value"] = datetime.toISOExtString;
   //   return this;
   // }
-  
-  mixin(BS5Calls!("InputDateTime"));
 }
 ///
 unittest {
-  // assert(BS5InputDateTime == `<input class="form-control" type="datetime-local">`);
+  assert(BS5InputDateTime() == `<input class="form-control" type="datetime-local" />`);
+  assert(BS5InputDateTime(["testclass"]) == `<input class="form-control testclass" type="datetime-local" />`);
+  assert(BS5InputDateTime(["a":"b"]) == `<input class="form-control" type="datetime-local" a="b" />`);
+  assert(BS5InputDateTime(["testclass"], ["a":"b"]) == `<input class="form-control testclass" type="datetime-local" a="b" />`);
 }

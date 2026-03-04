@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe:
 
 class BS5InputDate : BS5Input {
-  mixin BS5This!(["form-control"], ["type":"date"]);
+  mixin H5Template!(BS5InputDate, ["form-control"], ["type":"date"]);
 
   // BS5InputDate value(long timestamp) {
   //   attribute("value"] = (cast(DateTime)fromTimestamp(timestamp)).toISOExtString.split("T")[0];
@@ -44,10 +44,11 @@ class BS5InputDate : BS5Input {
   // unittest {
   //   /// TODO  
   // }
-
-  mixin(BS5Calls!("InputDate"));
 }
 ///
 unittest {
-  // assert(BS5InputDate() == `<input class="form-control" type="date">`);
+  assert(BS5InputDate() == `<input class="form-control" type="date" />`);
+  assert(BS5InputDate(["testclass"]) == `<input class="form-control testclass" type="date" />`);
+  assert(BS5InputDate(["a":"b"]) == `<input class="form-control" a="b" type="date" />`);
+  assert(BS5InputDate(["testclass"], ["a":"b"]) == `<input class="form-control testclass" a="b" type="date" />`);
 }

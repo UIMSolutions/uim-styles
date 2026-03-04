@@ -7,13 +7,12 @@ mixin(ShowModule!());
 @safe:  
 
 class BS5InputImage : H5Input {
-  mixin BS5This!(["form-control"], ["type":"image"]);
- 
-  mixin(BS5Calls!("InputImage"));
+  mixin H5Template!(BS5InputImage, ["form-control"], ["type":"image"]);
 }
-
 ///
 unittest {
-  // assert(BS5InputImage());
-  // assert(BS5InputImage() == `<input class="form-control" type="image">`);
+  assert(BS5InputImage() == `<input class="form-control" type="image" />`);
+  assert(BS5InputImage(["testclass"]) == `<input class="form-control testclass" type="image" />`);
+  assert(BS5InputImage(["a":"b"]) == `<input class="form-control" a="b" type="image" />`);
+  assert(BS5InputImage(["testclass"], ["a":"b"]) == `<input class="form-control testclass" a="b" type="image" />`);
 }
