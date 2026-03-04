@@ -7,12 +7,12 @@ mixin(ShowModule!());
 @safe: 
 
 class BS5FormCheckInput : H5Input {
-  mixin BS5This!(["form-check-input"]);
-
-  mixin(BS5Calls!("FormCheckInput"));
+  mixin H5Template!(BS5FormCheckInput, ["form-check-input"], null);
 }
 ///
 unittest {
-// TODO // assert(BS5FormCheckInput == );
-  // assert(BS5FormCheckInput == `<input class="form-check-input">`);
+  assert(BS5FormCheckInput() == `<input class="form-check-input">`);
+  assert(BS5FormCheckInput(["testclass"]) == `<input class="form-check-input testclass">`);
+  assert(BS5FormCheckInput(["a":"b"]) == `<input class="form-check-input" a="b">`);
+  assert(BS5FormCheckInput(["testclass"], ["a":"b"]) == `<input class="form-check-input testclass" a="b">`);
 }

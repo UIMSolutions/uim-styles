@@ -48,6 +48,14 @@ class BS5ButtonGroup : H5Div {
 }
 ///
 unittest {
-  // assert(BS5ButtonGroup() == `<div class="btn-group" role="group"></div>`);
+  assert(BS5ButtonGroup() == `<div class="btn-group" role="group"></div>`);
+  assert(BS5ButtonGroup(["testclass"]) == `<div class="btn-group testclass" role="group"></div>`);
+  assert(BS5ButtonGroup(["a":"b"]) == `<div class="btn-group" a="b" role="group"></div>`);
+  assert(BS5ButtonGroup(["testclass"], ["a":"b"]) == `<div class="btn-group testclass" a="b" role="group"></div>`);
+
+  assert(BS5ButtonGroup("Hello") == `<div class="btn-group" role="group">Hello</div>`);
+  assert(BS5ButtonGroup(["testclass"], "Hello") == `<div class="btn-group testclass" role="group">Hello</div>`);
+  assert(BS5ButtonGroup(["a":"b"], "Hello") == `<div class="btn-group" a="b" role="group">Hello</div>`);
+  assert(BS5ButtonGroup(["testclass"], ["a":"b"], "Hello") == `<div class="btn-group testclass" a="b" role="group">Hello</div>`);
 }
 

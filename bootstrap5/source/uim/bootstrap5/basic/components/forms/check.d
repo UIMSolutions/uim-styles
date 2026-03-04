@@ -6,10 +6,9 @@ mixin(ShowModule!());
 
 @safe:
 
+@StringAttribute("for", "forId")
 class BS5FormCheck : H5Div {
-  mixin BS5This!(["form-check"]);
-
-  mixin(TProperty!("string", "forId"));
+  mixin H5Template!(BS5FormCheck, ["form-check"], null);
 
   BS5FormCheck inline(bool mode = true) {
     if (mode)
@@ -18,11 +17,19 @@ class BS5FormCheck : H5Div {
   }
 
   // mixin(MyContent!("label", "BS5FormCheckLabel"));
-
-  mixin(BS5Calls!("FormCheck"));
 }
 ///
 unittest {
-  // assert(BS5FormCheck == `<div class="form-check"></div>`);
-  // assert(BS5FormCheck.inline == `<div class="form-check form-check-inline"></div>`);
+  assert(BS5FormCheck() == `<div class="form-check"></div>`);
+  assert(BS5FormCheck(["testclass"]) == `<div class="form-check testclass"></div>`);
+  assert(BS5FormCheck(["a":"b"]) == `<div class="form-check" a="b"></div>`);
+  assert(BS5FormCheck(["testclass"], ["a":"b"]) == `<div class="form-check testclass" a="b"></div>`);
+
+  assert(BS5FormCheck("Hello") == `<div class="form-check"></div>`);
+  assert(BS5FormCheck(["testclass"], "Hello") == `<div class="form-check testclass"></div>`);
+  assert(BS5FormCheck(["a":"b"], "Hello") == `<div class="form-check" a="b"></div>`);
+  assert(BS5FormCheck(["testclass"], ["a":"b"], "Hello") == `<div class="form-check testclass" a="b"></div>`);
+
+  assert(BS5FormCheck.forId("test") == `<div class="form-check" for="test"></div>`);
+  // assert(BS5FormCheck.inline() == `<div class="form-check form-check-inline"></div>`);
 }

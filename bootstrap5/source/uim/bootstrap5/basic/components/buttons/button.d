@@ -73,5 +73,13 @@ class BS5Button : H5Button {
 
 ///
 unittest {
-  // assert(BS5Button() == `<button class="btn" type="button"></button>`);
-}
+  assert(BS5Button() == `<button class="btn" type="button"></button>`);
+  assert(BS5Button(["testclass"]) == `<button class="btn testclass" type="button"></button>`);
+  assert(BS5Button(["a":"b"]) == `<button class="btn" a="b" type="button"></button>`);
+  assert(BS5Button(["testclass"], ["a":"b"]) == `<button class="btn testclass" a="b" type="button"></button>`);
+
+  assert(BS5Button("Hello") == `<button class="btn" type="button">Hello</button>`);
+  assert(BS5Button(["testclass"], "Hello") == `<button class="btn testclass" type="button">Hello</button>`);
+  assert(BS5Button(["a":"b"], "Hello") == `<button class="btn" a="b" type="button">Hello</button>`);
+  assert(BS5Button(["testclass"], ["a":"b"], "Hello") == `<button class="btn testclass" a="b" type="button">Hello</button>`);
+  }

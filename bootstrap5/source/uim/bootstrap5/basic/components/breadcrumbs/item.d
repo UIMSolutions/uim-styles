@@ -35,10 +35,17 @@ class BS5BreadcrumbItem : H5Li {
   // unittest {
   //   // assert(BS5BreadcrumbItem.link == `<li class="breadcrumb-item"><a></a></li>`);
   // }
-
 }
 ///
 unittest {
-  // assert(BS5BreadcrumbItem == `<li class="breadcrumb-item"></li>`);
+  assert(BS5BreadcrumbItem() == `<li class="breadcrumb-item"></li>`);
+  assert(BS5BreadcrumbItem(["testclass"]) == `<li class="breadcrumb-item testclass"></li>`);
+  assert(BS5BreadcrumbItem(["a":"b"]) == `<li class="breadcrumb-item" a="b"></li>`);
+  assert(BS5BreadcrumbItem(["testclass"], ["a":"b"]) == `<li class="breadcrumb-item testclass" a="b"></li>`);
+
+  assert(BS5BreadcrumbItem("Hello") == `<li class="breadcrumb-item">Hello</li>`);
+  assert(BS5BreadcrumbItem(["testclass"], "Hello") == `<li class="breadcrumb-item testclass">Hello</li>`);
+  assert(BS5BreadcrumbItem(["a":"b"], "Hello") == `<li class="breadcrumb-item" a="b">Hello</li>`);
+  assert(BS5BreadcrumbItem(["testclass"], ["a":"b"], "Hello") == `<li class="breadcrumb-item testclass" a="b">Hello</li>`);
 }
 

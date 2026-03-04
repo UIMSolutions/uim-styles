@@ -6,29 +6,11 @@ mixin(ShowModule!());
 
 @safe:
 
+@CssClass("active") // active state
+@CssClass("block", "btn-block") // block level button
+@CssClass("disabled") // disabled state
 class BS5ButtonSubmit : H5Button {
-  mixin BS5This!(["btn"], ["type": "submit"]);
-
-  // Set button to active state
-  BS5ButtonSubmit active(bool mode = true) {
-    if (mode)
-      _classes ~= "active";
-    return this;
-  }
-  ///
-  unittest {
-    // assert(BS5ButtonSubmit.active(true) == `<button class="active btn" type="submit"></button>`);
-  }
-
-  BS5ButtonSubmit block(bool mode = true) {
-    if (mode)
-      this.addClasses("btn-block");
-    return this;
-  }
-  ///
-  unittest {
-    // assert(BS5ButtonSubmit.block(true) == `<button class="btn btn-block" type="submit"></button>`);
-  }
+  mixin H5Template!(BS5ButtonSubmit, ["btn"], ["type": "submit"]);
 
   auto color(string value) {
     this.addClasses("btn-" ~ value);
@@ -39,18 +21,7 @@ class BS5ButtonSubmit : H5Button {
     // assert(BS5ButtonSubmit.color("primary") == `<button class="btn btn-primary" type="submit"></button>`);
   }
 
-  // Set button to disabled
-  BS5ButtonSubmit disabled(bool mode = true) {
-    if (mode)
-      this.addClasses("disabled");
-    return this;
-  }
-  ///
-  unittest {
-    // assert(BS5ButtonSubmit.disabled(true) == `<button class="btn disabled" type="submit"></button>`);
-  }
-
-  // Set outline color
+    // Set outline color
   BS5ButtonSubmit outline(string value) {
     this.addClasses("btn-outline-" ~ value);
     return this;
@@ -68,10 +39,23 @@ class BS5ButtonSubmit : H5Button {
   unittest {
     // assert(BS5ButtonSubmit.size("lg") == `<button class="btn btn-lg" type="submit"></button>`);
   }
-
-  mixin(BS5Calls!("ButtonSubmit"));
 }
 ///
 unittest {
-  // // assert(BS5ButtonSubmit == `<button class="btn" type="button"></button>`);
+  assert(BS5ButtonSubmit() == `<button class="btn" type="submit"></button>`);
+  assert(BS5ButtonSubmit(["testclass"]) == `<button class="btn testclass" type="submit"></button>`);
+  assert(BS5ButtonSubmit(["a": "b"]) == `<button class="btn" a="b" type="submit"></button>`);
+  assert(BS5ButtonSubmit(["testclass"], ["a": "b"]) == `<button class="btn testclass" a="b" type="submit"></button>`);
+
+  assert(BS5ButtonSubmit("Hello") == `<button class="btn" type="submit">Hello</button>`);
+  assert(BS5ButtonSubmit(["testclass"], "Hello") == `<button class="btn testclass" type="submit">Hello</button>`);
+  assert(BS5ButtonSubmit(["a": "b"], "Hello") == `<button class="btn" a="b" type="submit">Hello</button>`);
+  assert(BS5ButtonSubmit(["testclass"], ["a": "b"], "Hello") == `<button class="btn testclass" a="b" type="submit">Hello</button>`);
+
+  assert(BS5ButtonSubmit.active(true) == `<button class="active btn" type="submit"></button>`);
+  assert(BS5ButtonSubmit.block(true) == `<button class="btn btn-block" type="submit"></button>`);
+  assert(BS5ButtonSubmit.color("primary") == `<button class="btn btn-primary" type="submit"></button>`);
+  assert(BS5ButtonSubmit.disabled(true) == `<button class="btn disabled" type="submit"></button>`);
+  assert(BS5ButtonSubmit.outline("primary") == `<button class="btn btn-outline-primary" type="submit"></button>`);
+  assert(BS5ButtonSubmit.size("lg") == `<button class="btn btn-lg" type="submit"></button>`);
 }
