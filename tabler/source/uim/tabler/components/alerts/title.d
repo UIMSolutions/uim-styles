@@ -7,12 +7,22 @@ mixin(ShowModule!());
 @safe:
 
 /** 
- * AlertTitle is used to create an alert title component.
- * https://tabler.io/docs/alerts
- */
+  * AlertTitle is used to create an alert title component.
+  * https://tabler.io/docs/alerts
+  *
+  * Note: AlertTitle is used inside the Alert component and should not be used outside of it.
+  * AlertTitle is a H4 element with the class "alert-title". It is used to display the title of an alert.
+  * AlertTitle can be used with the color methods of the Alert component to change the color of the title.
+  * Example:
+  * ```
+  * auto alert = TABAlert().color("red").colorText("white");
+  * alert.add(TABAlertTitle("This is an alert title").colorText("white"));
+  * alert.add(TABAlertIcon().color("white"));
+  * alert.add("This is an alert message");
+  * ``` 
+  */
 class TABAlertTitle : H5H4 {
   mixin H5Template!(TABAlertTitle, ["alert-title"]);
-  mixin(HtmlMethods!TABAlertTitle);
 }
 ///
 unittest {

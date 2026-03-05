@@ -8,7 +8,6 @@ mixin(ShowModule!());
 
 class TABFormFooter : H5Div {
   mixin H5Template!(TABFormFooter, ["form-footer"]);
-  mixin(HtmlMethods!TABFormFooter); 
 }
 ///
 unittest {

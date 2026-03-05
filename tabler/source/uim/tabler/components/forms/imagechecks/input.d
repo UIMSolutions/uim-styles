@@ -12,7 +12,6 @@ mixin(ShowModule!());
  */
 class TABImageCheckInput : H5Input {
   mixin H5Template!(TABImageCheckInput, ["form-imagecheck-input"]);
-  mixin(HtmlMethods!TABImageCheckInput);
 }
 ///
 unittest {

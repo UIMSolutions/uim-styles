@@ -12,7 +12,6 @@ mixin(ShowModule!());
  */
 class TABAlert : H5Div {
   mixin H5Template!(TABAlert,["alert"], ["role":"alert"]);
-  mixin(HtmlMethods!TABAlert);
 
   TABAlert color(string value) {
     this.addClass(value);

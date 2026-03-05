@@ -12,7 +12,6 @@ mixin(ShowModule!());
  */
 class TABFormColorInputColor : H5Span {
   mixin H5Template!(TABFormColorInputColor, ["form-colorinput-color"]);
-  mixin(HtmlMethods!TABFormColorInputColor);
 }
 ///
 unittest {

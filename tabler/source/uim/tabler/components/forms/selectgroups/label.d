@@ -11,7 +11,6 @@ mixin(ShowModule!());
  */
 class TABSelectgroupLabel : H5Span {
   mixin H5Template!(TABSelectgroupLabel, ["form-selectgroup-label"]);
-  mixin(HtmlMethods!TABSelectgroupLabel);
 }
 ///
 unittest {

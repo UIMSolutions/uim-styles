@@ -12,7 +12,6 @@ mixin(ShowModule!());
  */
 class TABImageCheckFigure : H5Span {
   mixin H5Template!(TABImageCheckFigure, ["form-imagecheck-figure"]);
-  mixin(HtmlMethods!TABImageCheckFigure);
 }
 ///
 unittest {

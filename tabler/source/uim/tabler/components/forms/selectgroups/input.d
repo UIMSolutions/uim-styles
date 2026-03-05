@@ -8,7 +8,6 @@ mixin(ShowModule!());
 
 class TABSelectgroupInput : H5Input {
   mixin H5Template!(TABSelectgroupInput, ["form-selectgroup-input"]);
-  mixin(HtmlMethods!TABSelectgroupInput);
 }
 ///
 unittest {

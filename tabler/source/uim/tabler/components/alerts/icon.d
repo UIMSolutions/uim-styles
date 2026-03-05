@@ -13,7 +13,6 @@ mixin(ShowModule!());
  */
 class TABAlertIcon : H5Div {
   mixin H5Template!(TABAlertIcon, ["alert-icon"]);
-  mixin(HtmlMethods!TABAlertIcon);
 
   TABAlertIcon color(string value) {
     this.addClass(value);

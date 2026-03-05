@@ -12,7 +12,6 @@ mixin(ShowModule!());
  */
 class TABImageCheckLabel : H5Label {
   mixin H5Template!(TABImageCheckLabel, ["form-imagecheck"]);
-  mixin(HtmlMethods!TABImageCheckLabel);
 }
 ///
 unittest {
