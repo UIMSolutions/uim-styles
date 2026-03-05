@@ -8,18 +8,19 @@ mixin(ShowModule!());
 
 /// An unordered list with list items
 class BS5ListInline : H5Ul {
-  mixin BS5This!(["list-inline"]);
+  mixin H5Template!(BS5ListInline, ["list-inline"]);
 
 //   // mixin(MyContent!("item", "BS5ListInlineItem"));
-//   ///
-// unittest {
-//     // assert(BS5ListInline.item == `<ul class="list-inline"><li class="list-inline-item"></li></ul>`);
-//     // assert(BS5ListInline.item("test") == `<ul class="list-inline"><li class="list-inline-item">test</li></ul>`);
-//   }}
-
-  mixin(BS5Calls!("ListInline"));
 }
 ///
 unittest {
-  // assert(BS5ListInline() == `<ul class="list-inline"></ul>`);
+  assert(BS5ListInline() == `<ul class="list-inline"></ul>`);
+  assert(BS5ListInline(["testclass"]) == `<ul class="list-inline testclass"></ul>`);
+  assert(BS5ListInline(["a":"b"]) == `<ul class="list-inline" a="b"></ul>`);
+  assert(BS5ListInline(["testclass"], ["a":"b"]) == `<ul class="list-inline testclass" a="b"></ul>`);
+
+  assert(BS5ListInline("SomeContent") == `<ul class="list-inline">SomeContent</ul>`);
+  assert(BS5ListInline(["testclass"], "SomeContent") == `<ul class="list-inline testclass">SomeContent</ul>`);
+  assert(BS5ListInline(["a":"b"], "SomeContent") == `<ul class="list-inline" a="b">SomeContent</ul>`);
+  assert(BS5ListInline(["testclass"], ["a":"b"], "SomeContent") == `<ul class="list-inline testclass" a="b">SomeContent</ul>`);
 }
