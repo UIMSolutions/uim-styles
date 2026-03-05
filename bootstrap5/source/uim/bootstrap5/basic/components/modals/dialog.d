@@ -6,16 +6,10 @@ mixin(ShowModule!());
 
 @safe:
 
+@CssClass("fade")
+@CssClass("centered", "modal-dialog-centered")
 class BS5ModalDialog : H5Div {
   mixin H5Template!(BS5ModalDialog, ["modal-dialog"], ["role":"document"]);
-
-  // O fade(bool mode = true) {
-  //   return this.addClasses("fade");
-  // }
-  // ///
-  // unittest {
-  //   // assert(BS5ModalDialog.fade == `<div class="fade modal-dialog" role="document"></div>`);
-  // }
 
   // O size(string aSize) {
   //   return this.addClasses("modal-" ~ aSize);
@@ -24,15 +18,6 @@ class BS5ModalDialog : H5Div {
   // unittest {
   //   // assert(BS5ModalDialog.size(
   //       "sm") == `<div class="modal-dialog modal-sm" role="document"></div>`);
-  // }
-
-  // O centered(bool mode = true) {
-  //   return this.addClasses("modal-dialog-centered");
-  // }
-  // ///
-  // unittest {
-  //   assert(
-  //     BS5ModalDialog.centered == `<div class="modal-dialog modal-dialog-centered" role="document"></div>`);
   // }
 }
 ///
