@@ -8,7 +8,6 @@ mixin(ShowModule!());
 
 class TABButtonPillLink : TABButtonLink {
   mixin H5Template!(TABButtonPillLink, ["btn", "btn-pill"], ["role": "button"]);
-  mixin(HtmlMethods!TABButtonPillLink);
 }
 
 ///

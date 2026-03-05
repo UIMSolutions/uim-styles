@@ -12,7 +12,6 @@ mixin(ShowModule!());
  */
 class TABFormCheckLabel : H5Span {
   mixin H5Template!(TABFormCheckLabel, ["form-check-label"]);
-  mixin(HtmlMethods!TABFormCheckLabel);
 }
 ///
 unittest {

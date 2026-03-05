@@ -10,7 +10,6 @@ import uim.tabler;
  */
 class TABDatagridContent : H5Div {
   mixin H5Template!(TABDatagridContent, ["datagrid-content"]);
-  mixin(HtmlMethods!TABDatagridContent);
 
   TABDatagridContent color(string value) {
     this.addClass("bg-" ~ value);

@@ -8,7 +8,6 @@ mixin(ShowModule!());
 
 class TABButtonIconLink : TABButtonLink {
   mixin H5Template!(TABButtonIconLink, ["btn", "btn-icon"], ["role": "button"]);
-  // mixin(HtmlMethods!TABButtonIconLink);
 }
 ///
 unittest {

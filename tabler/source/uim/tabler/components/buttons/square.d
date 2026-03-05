@@ -8,7 +8,6 @@ mixin(ShowModule!());
 
 class TABButtonSquare : TABButton {
   mixin H5Template!(TABButtonSquare, ["btn", "btn-square"], ["type": "button"]);
-  mixin(HtmlMethods!TABButtonSquare);
 }
 ///
 unittest {

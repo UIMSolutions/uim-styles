@@ -12,7 +12,6 @@ mixin(ShowModule!());
  */
 class TABFormCheck : H5Label {
   mixin H5Template!(TABFormCheck, ["form-check"]);
-  mixin(HtmlMethods!TABFormCheck);
 
   mixin(AddContentCalls!("TABFormCheck", "Input", "TABFormCheckInput"));
 

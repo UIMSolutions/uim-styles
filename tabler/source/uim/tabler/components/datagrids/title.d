@@ -12,7 +12,6 @@ mixin(ShowModule!());
  */
 class TABDatagridTitle : H5Div {
   mixin H5Template!(TABDatagridTitle, ["datagrid-title"]);
-  mixin(HtmlMethods!TABDatagridTitle);
   
   TABDatagridTitle color(string newColor) {
     this.addClass("bg-" ~ newColor);

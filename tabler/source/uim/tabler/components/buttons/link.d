@@ -16,7 +16,6 @@ mixin(ShowModule!());
 @CssClass("light", "btn-light")
 class TABButtonLink : H5A {
   mixin H5Template!(TABButtonLink, ["btn"], ["role": "button"]);
-  mixin(HtmlMethods!TABButtonLink);
 }
 ///
 unittest {

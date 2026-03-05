@@ -17,7 +17,6 @@ mixin(ShowModule!());
  */
 class TABButtonSquareLink : TABButtonLink {
   mixin H5Template!(TABButtonSquareLink, ["btn", "btn-square"], ["role": "button"]);
-  mixin(HtmlMethods!TABButtonSquareLink);
 }
 ///
 unittest {
