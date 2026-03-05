@@ -7,22 +7,21 @@ mixin(ShowModule!());
 @safe: 
 
 class BS5NavbarNav : H5Ul {
-  mixin BS5This!(["navbar-nav"]);
+  mixin H5Template!(BS5NavbarNav, ["navbar-nav"]);
 
 //   // mixin(MyContent!("item", "BS5NavItem"));
-//   ///
-// unittest {
-//     // assert(BS5NavbarNav.item == `<ul class="navbar-nav"><li class="nav-item"></li></ul>`);
-//   }}
   
 //   // mixin(MyContent!("link", "this.item", "BS5NavLink"));
-//   ///
-// unittest {
-//     // assert(BS5NavbarNav.link == `<ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="#"></a></li></ul>`);
-//   }}
-mixin(BS5Calls!("NavbarNav"));
 }
 ///
 unittest {
-  // assert(BS5NavbarNav() == `<ul class="navbar-nav"></ul>`);
+  assert(BS5NavbarNav() == `<ul class="navbar-nav"></ul>`);
+  assert(BS5NavbarNav(["testclass"]) == `<ul class="navbar-nav testclass"></ul>`);
+  assert(BS5NavbarNav(["a":"b"]) == `<ul class="navbar-nav" a="b"></ul>`);
+  assert(BS5NavbarNav(["testclass"], ["a":"b"]) == `<ul class="navbar-nav testclass" a="b"></ul>`);
+
+  assert(BS5NavbarNav("Hello") == `<ul class="navbar-nav">Hello</ul>`);
+  assert(BS5NavbarNav(["testclass"], "Hello") == `<ul class="navbar-nav testclass">Hello</ul>`);
+  assert(BS5NavbarNav(["a":"b"], "Hello") == `<ul class="navbar-nav" a="b">Hello</ul>`);
+  assert(BS5NavbarNav(["testclass"], ["a":"b"], "Hello") == `<ul class="navbar-nav testclass" a="b">Hello</ul>`);
 }

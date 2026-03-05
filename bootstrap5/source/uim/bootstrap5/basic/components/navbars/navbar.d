@@ -7,46 +7,27 @@ mixin(ShowModule!());
 @safe: 
 
 class BS5Navbar : H5Nav {
-  mixin BS5This!(["navbar"]);
+  mixin H5Template!(BS5Navbar, ["navbar"]);
 
 //   O center(bool value = true) {
 //     if (value) this.addClasses("justify-content-center");
 //     return this;
 //   }
-//   ///
-// unittest {
-//     // assert(BS5Navbar.center() == `<nav class="justify-content-center navbar"></nav>`);
-//     // assert(BS5Navbar("Test").center() == `<nav class="justify-content-center navbar">Test</nav>`);
-//   }}
 
 //   O dark(bool value = true) {
 //     if (value) this.addClasses("navbar-dark");
 //     return this;
 //   }
-//   ///
-// unittest {
-//     // assert(BS5Navbar.dark == `<nav class="navbar navbar-dark"></nav>`);
-//   }}
 
 //   O expand(string screenSize) {
 //     this.addClasses("navbar-expand-" ~ screenSize);
 //     return this;
 //   }
-//   ///
-//   ///
-// unittest {
-//     // assert(BS5Navbar.expand("lg") == `<nav class="navbar navbar-expand-lg"></nav>`);
-//   }}
 
 //   O light(bool value = true) {
 //     this.addClasses("navbar-light");
 //     return this;
 //   }
-//   ///
-//   ///
-// unittest {
-//     // assert(BS5Navbar.light == `<nav class="navbar navbar-light"></nav>`);
-//   }}
 
 // /*
 //   // mixin(MyContent!("nav", "BS5NavbarNav"));
@@ -55,10 +36,16 @@ class BS5Navbar : H5Nav {
 //   {
 //     // assert(BS5Navbar.nav == `<nav class="navbar"><ul class="navbar-nav"></ul></nav>`);
 //   }*/
-
-mixin(BS5Calls!("Navbar"));
 }
 ///
 unittest {
-  // assert(BS5Navbar() == `<nav class="navbar"></nav>`);
+  assert(BS5Navbar() == `<nav class="navbar"></nav>`);
+  assert(BS5Navbar(["testclass"]) == `<nav class="navbar testclass"></nav>`);
+  assert(BS5Navbar(["a":"b"]) == `<nav class="navbar" a="b"></nav>`);
+  assert(BS5Navbar(["testclass"], ["a":"b"]) == `<nav class="navbar testclass" a="b"></nav>`);
+
+  assert(BS5Navbar("Hello") == `<nav class="navbar">Hello</nav>`);
+  assert(BS5Navbar(["testclass"], "Hello") == `<nav class="navbar testclass">Hello</nav>`);
+  assert(BS5Navbar(["a":"b"], "Hello") == `<nav class="navbar" a="b">Hello</nav>`);
+  assert(BS5Navbar(["testclass"], ["a":"b"], "Hello") == `<nav class="navbar testclass" a="b">Hello</nav>`);
 }

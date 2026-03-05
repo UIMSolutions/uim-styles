@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe:
 
 class BS5ModalDialog : H5Div {
-  mixin BS5This!(["modal-dialog"], ["role":"document"]);
+  mixin H5Template!(BS5ModalDialog, ["modal-dialog"], ["role":"document"]);
 
   // O fade(bool mode = true) {
   //   return this.addClasses("fade");
@@ -34,10 +34,16 @@ class BS5ModalDialog : H5Div {
   //   assert(
   //     BS5ModalDialog.centered == `<div class="modal-dialog modal-dialog-centered" role="document"></div>`);
   // }
-
-  mixin(BS5Calls!("ModalDialog"));
 }
 ///
 unittest {
-  // assert(BS5ModalDialog() == `<div class="modal-dialog" role="document"></div>`);
+  assert(BS5ModalDialog() == `<div class="modal-dialog" role="document"></div>`);
+  assert(BS5ModalDialog(["testclass"]) == `<div class="modal-dialog testclass" role="document"></div>`);
+  assert(BS5ModalDialog(["a":"b"]) == `<div class="modal-dialog" a="b" role="document"></div>`);
+  assert(BS5ModalDialog(["testclass"], ["a":"b"]) == `<div class="modal-dialog testclass" a="b" role="document"></div>`);
+
+  assert(BS5ModalDialog("Hello") == `<div class="modal-dialog" role="document">Hello</div>`);
+  assert(BS5ModalDialog(["testclass"], "Hello") == `<div class="modal-dialog testclass" role="document">Hello</div>`);
+  assert(BS5ModalDialog(["a":"b"], "Hello") == `<div class="modal-dialog" a="b" role="document">Hello</div>`);
+  assert(BS5ModalDialog(["testclass"], ["a":"b"], "Hello") == `<div class="modal-dialog testclass" a="b" role="document">Hello</div>`);
 }
