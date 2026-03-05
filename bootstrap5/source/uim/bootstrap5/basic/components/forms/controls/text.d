@@ -11,7 +11,7 @@ mixin(ShowModule!());
  * It extends the BS5Input class and provides additional functionality specific to text inputs.
  */
 class BS5InputText : BS5Input {
-  mixin BS5This!(null, ["type":"text"]);
+  mixin H5Template!(BS5InputText, ["form-control"], ["type":"text"]);
   
   // BS5InputText value(UUID id) {
   //   this.value(id.toString);
@@ -27,9 +27,11 @@ class BS5InputText : BS5Input {
   //   attribute("value"] = txt;
   //   return this;
   // }
-mixin(BS5Calls!("InputText"));
 }
 ///
 unittest {
-  // assert(BS5InputText == `<input class="form-control" type="text">`);
+  assert(BS5InputText() == `<input class="form-control" type="text">`);
+  assert(BS5InputText(["testclass"]) == `<input class="form-control testclass" type="text">`);
+  assert(BS5InputText(["a":"b"]) == `<input class="form-control" type="text" a="b">`);
+  assert(BS5InputText(["testclass"], ["a":"b"]) == `<input class="form-control testclass" type="text" a="b">`);
 }

@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe:  
 
 class BS5InputSelect : H5Select {
-  mixin BS5This!(["form-control"]);  
+  mixin H5Template!(BS5InputSelect, ["form-control"]);  
 
   // // mixin(MyContent!("option", "H5Option"));
   // BS5InputSelect options(string[] values, string selected = "", string disabled = "") {
@@ -95,9 +95,16 @@ class BS5InputSelect : H5Select {
   //   return this;  
   // }
   
-  mixin(BS5Calls!("InputSelect"));
 }
 ///
 unittest {
-  // TODO assert 
+  assert(BS5InputSelect() == `<select class="form-control"></select>`);
+  assert(BS5InputSelect(["testclass"]) == `<select class="form-control testclass"></select>`);
+  assert(BS5InputSelect(["a":"b"]) == `<select class="form-control" a="b"></select>`);
+  assert(BS5InputSelect(["testclass"], ["a":"b"]) == `<select class="form-control testclass" a="b"></select>`);
+
+  assert(BS5InputSelect("SomeContent") == `<select class="form-control">SomeContent</select>`);
+  assert(BS5InputSelect(["testclass"], "SomeContent") == `<select class="form-control testclass">SomeContent</select>`);
+  assert(BS5InputSelect(["a":"b"], "SomeContent") == `<select class="form-control" a="b">SomeContent</select>`);
+  assert(BS5InputSelect(["testclass"], ["a":"b"], "SomeContent") == `<select class="form-control testclass" a="b">SomeContent</select>`);
 }
