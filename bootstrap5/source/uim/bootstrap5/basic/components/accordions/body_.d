@@ -8,9 +8,7 @@ mixin(ShowModule!());
 
 /// 
 class BS5AccordionBody : H5Div {
-  mixin BS5This!(["accordion-body"]);
-
-  mixin(BS5Calls!("AccordionBody"));
+  mixin H5Template!(BS5AccordionBody, ["accordion-body"]);
 }
 ///
 unittest {

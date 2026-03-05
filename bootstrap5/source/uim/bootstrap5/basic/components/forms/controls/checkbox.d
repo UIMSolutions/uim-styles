@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe:  
 
 class BS5Checkbox : BS5Input {
-  mixin BS5Template!(BS5Checkbox, null, ["type":"checkbox"]);
+  mixin H5Template!(BS5Checkbox, null, ["type":"checkbox"]);
 }
 ///
 unittest {

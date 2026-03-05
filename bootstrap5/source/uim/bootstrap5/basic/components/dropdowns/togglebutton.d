@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe: 
 
 class BS5DropdownToggle : BS5Button {
-  mixin BS5This!(["btn", "dropdown-toggle"], ["aria-haspopup":"true", "aria-expanded":"false"]);
+  mixin H5Template!(BS5DropdownToggle, ["btn", "dropdown-toggle"], ["aria-haspopup":"true", "aria-expanded":"false"]);
 }
 ///
 unittest {

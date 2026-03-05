@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe:
 
 class BS5CarouselControlPrev : H5A {
-  mixin BS5This!(["carousel-control-prev"], ["data-bs-slide":"prev"]);
+  mixin H5Template!(BS5CarouselControlPrev, ["carousel-control-prev"], ["data-bs-slide":"prev"]);
   
   // override public void initialize() {
   //   super.initialize;
@@ -15,8 +15,6 @@ class BS5CarouselControlPrev : H5A {
   //     .addContent(
   //       H5Span(["carousel-control-prev-icon"]), H5Span(["sr-only"], "Previous"));
   // }
-
-  mixin(BS5Calls!("CarouselControlPrev"));  
 }
 ///
 unittest {

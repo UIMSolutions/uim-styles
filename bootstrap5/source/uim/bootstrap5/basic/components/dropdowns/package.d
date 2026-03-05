@@ -1,14 +1,16 @@
 ﻿module uim.bootstrap5.basic.components.dropdowns;
 
-public import uim.bootstrap5.basic.components.dropdowns.dropdown;
-public import uim.bootstrap5.basic.components.dropdowns.form;
-public import uim.bootstrap5.basic.components.dropdowns.menu;
-public import uim.bootstrap5.basic.components.dropdowns.link;
-public import uim.bootstrap5.basic.components.dropdowns.button;
-public import uim.bootstrap5.basic.components.dropdowns.divider;
-public import uim.bootstrap5.basic.components.dropdowns.header;
-public import uim.bootstrap5.basic.components.dropdowns.item;
-public import uim.bootstrap5.basic.components.dropdowns.text;
+public {
+  import uim.bootstrap5.basic.components.dropdowns.dropdown;
+  import uim.bootstrap5.basic.components.dropdowns.form;
+  import uim.bootstrap5.basic.components.dropdowns.menu;
+  import uim.bootstrap5.basic.components.dropdowns.link;
+  import uim.bootstrap5.basic.components.dropdowns.button;
+  import uim.bootstrap5.basic.components.dropdowns.divider;
+  import uim.bootstrap5.basic.components.dropdowns.header;
+  import uim.bootstrap5.basic.components.dropdowns.item;
+  import uim.bootstrap5.basic.components.dropdowns.text;
 //public import uim.bootstrap5.basic.components.dropdowns.navs;
-public import uim.bootstrap5.basic.components.dropdowns.togglebutton;
-public import uim.bootstrap5.basic.components.dropdowns.togglelink;
+  import uim.bootstrap5.basic.components.dropdowns.togglebutton;
+  import uim.bootstrap5.basic.components.dropdowns.togglelink;
+}

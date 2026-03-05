@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe:
 
 class BS5DropdownToggleLink : BS5ButtonLink {
-  mixin BS5This!(["btn", "dropdown-toggle"], [
+  mixin H5Template!(BS5DropdownToggleLink, ["btn", "dropdown-toggle"], [
       "href": "#",
       "aria-expanded": "false",
       "role": "button",

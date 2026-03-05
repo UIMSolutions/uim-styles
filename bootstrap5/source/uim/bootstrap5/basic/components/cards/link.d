@@ -7,8 +7,7 @@ mixin(ShowModule!());
 @safe: 
 
 class BS5CardLink : H5A {
-  mixin BS5This!(["card-link"], ["href":"#"]);
-  mixin(BS5Calls!("CardLink"));
+  mixin H5Template!(BS5CardLink, ["card-link"], ["href":"#"]);
 }
 ///
 unittest {

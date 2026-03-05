@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe:
 
 class BS5ButtonToolbar : H5Div {
-  mixin BS5This!(["btn-toolbar"], ["role": "toolbar"]);
+  mixin H5Template!(BS5ButtonToolbar, ["btn-toolbar"], ["role": "toolbar"]);
 
   // // mixin(MyAttribute!("label", "aria-label"));
   // ///
@@ -21,8 +21,6 @@ class BS5ButtonToolbar : H5Div {
   // unittest {
   //   // assert(BS5ButtonToolbar.group == `<div class="btn-toolbar" role="toolbar"><div class="btn-group" role="group"></div></div>`);
   // }
-
-  mixin(BS5Calls!("ButtonToolbar"));
 }
 ///
 unittest {
