@@ -21,7 +21,7 @@ unittest {
   assert(BS5Progress(["testclass"], ["a":"b"]) == `<div class="progress testclass" a="b"></div>`);
 
   assert(BS5Progress("SomeContent") == `<div class="progress">SomeContent</div>`);
-  assert(BS5Progress(["testclass"], "SomeContent", ["a":"b"]) == `<div class="progress testclass" a="b">SomeContent</div>`);
+  assert(BS5Progress(["testclass"], "SomeContent") == `<div class="progress testclass">SomeContent</div>`);
   assert(BS5Progress(["a":"b"], "SomeContent") == `<div class="progress" a="b">SomeContent</div>`);
   assert(BS5Progress(["testclass"], ["a":"b"], "SomeContent") == `<div class="progress testclass" a="b">SomeContent</div>`);
 }

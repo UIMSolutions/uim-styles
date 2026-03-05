@@ -11,7 +11,7 @@ class BS5CardBlockquote : H5Blockquote {
 }
 ///
 unittest {
-  assert(BS5CardBlockquote == `<blockquote class="card-blockquote"></blockquote>`);
+  assert(BS5CardBlockquote() == `<blockquote class="card-blockquote"></blockquote>`);
   assert(BS5CardBlockquote(["testclass"]) == `<blockquote class="card-blockquote testclass"></blockquote>`);
   assert(BS5CardBlockquote(["a":"b"]) == `<blockquote class="card-blockquote" a="b"></blockquote>`);
   assert(BS5CardBlockquote(["testclass"], ["a":"b"]) == `<blockquote class="card-blockquote testclass" a="b"></blockquote>`);

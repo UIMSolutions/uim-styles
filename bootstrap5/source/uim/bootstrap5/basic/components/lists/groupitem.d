@@ -9,7 +9,7 @@ mixin(ShowModule!());
 class BS5ListGroupItem : H5Div {
   mixin H5Template!(BS5ListGroupItem, ["list-group-item"]);
 
-  auto color(string aColor) { this.addClasses("list-group-item-"~aColor); return this; }
+  // auto color(string aColor) { this.addClasses("list-group-item-"~aColor); return this; }
 }
 ///
 unittest {

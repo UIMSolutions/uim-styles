@@ -11,7 +11,7 @@ class BS5Checkbox : BS5Input {
 }
 ///
 unittest {
-  assert(BS5Checkbox == `<input class="form-control" type="checkbox">`);
+  assert(BS5Checkbox() == `<input class="form-control" type="checkbox">`);
   assert(BS5Checkbox(["testclass"]) == `<input class="form-control testclass" type="checkbox">`);
   assert(BS5Checkbox(["a":"b"]) == `<input class="form-control" type="checkbox" a="b">`);
   assert(BS5Checkbox(["testclass"], ["a":"b"]) == `<input class="form-control testclass" type="checkbox" a="b">`);

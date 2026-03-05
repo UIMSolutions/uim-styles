@@ -13,13 +13,12 @@ mixin(ShowModule!());
 @CssClass("pill", "badge-pill")  // Rounded badges
 class BS5BadgeLink : H5A {
   mixin H5Template!(BS5BadgeLink, ["badge"], null);
-  mixin(HtmlMethods!BS5BadgeLink);
 
-  // Color of badge
-  BS5BadgeLink color(string name) {
-    this.addClasses("badge-" ~ name);
-    return this;
-  }
+  // // Color of badge
+  // BS5BadgeLink color(string name) {
+  //   this.addClasses("badge-" ~ name);
+  //   return this;
+  // }
 }
 ///
 unittest {

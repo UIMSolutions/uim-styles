@@ -11,7 +11,7 @@ class BS5InputButton : BS5Input {
 }
 ///
 unittest {
-  assert(BS5InputButton == `<input class="form-control" type="button">`);
+  assert(BS5InputButton() == `<input class="form-control" type="button">`);
   assert(BS5InputButton(["testclass"]) == `<input class="form-control testclass" type="button">`);
   assert(BS5InputButton(["a":"b"]) == `<input class="form-control" type="button" a="b">`);
   assert(BS5InputButton(["testclass"], ["a":"b"]) == `<input class="form-control testclass" type="button" a="b">`);

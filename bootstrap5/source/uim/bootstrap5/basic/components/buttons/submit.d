@@ -9,14 +9,10 @@ mixin(ShowModule!());
 class BS5ButtonSubmit : BS5Button {
   mixin H5Template!(BS5ButtonSubmit, ["btn"], ["type": "submit"]);
 
-  auto color(string value) {
-    this.addClasses("btn-" ~ value);
-    return this;
-  }
-  ///
-  unittest {
-    // assert(BS5ButtonSubmit.color("primary") == `<button class="btn btn-primary" type="submit"></button>`);
-  }
+  // auto color(string value) {
+  //   this.addClasses("btn-" ~ value);
+  //   return this;
+  // }
 
     // Set outline color
   // BS5ButtonSubmit outline(string value) {
@@ -24,14 +20,10 @@ class BS5ButtonSubmit : BS5Button {
   //   return this;
   // }
 
-  BS5ButtonSubmit size(string value) {
-    this.addClasses("btn-" ~ value);
-    return this;
-  }
-  ///
-  unittest {
-    // assert(BS5ButtonSubmit.size("lg") == `<button class="btn btn-lg" type="submit"></button>`);
-  }
+  // BS5ButtonSubmit size(string value) {
+  //   this.addClasses("btn-" ~ value);
+  //   return this;
+  // }
 }
 ///
 unittest {
