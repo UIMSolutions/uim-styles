@@ -11,18 +11,19 @@ mixin(ShowModule!());
   * https://getbootstrap.com/docs/5.0/components/input-group/#basic-example
   */
 class BS5InputGroupPrepend : H5Div {
-  mixin BS5This!(["input-group-prepend"]);
+  mixin H5Template!(BS5InputGroupPrepend, ["input-group-prepend"]);
 
   // // mixin(MyContent!("text", "BS5InputGroupText"));
-  // ///
-  // unittest {
-  //   assert(
-  //     BS5InputGroupPrepend.text == `<div class="input-group-prepend"><div class="input-group-text"></div></div>`);
-  // }
-
-  mixin(BS5Calls!("InputGroupPrepend"));
 }
 ///
 unittest {
-  // assert(BS5InputGroupPrepend() == `<div class="input-group-prepend"></div>`);
+  assert(BS5InputGroupPrepend() == `<div class="input-group-prepend"></div>`);
+  assert(BS5InputGroupPrepend(["testclass"]) == `<div class="input-group-prepend testclass"></div>`);
+  assert(BS5InputGroupPrepend(["a":"b"]) == `<div class="input-group-prepend" a="b"></div>`);
+  assert(BS5InputGroupPrepend(["testclass"], ["a":"b"]) == `<div class="input-group-prepend testclass" a="b"></div>`);
+
+  assert(BS5InputGroupPrepend("SomeContent") == `<div class="input-group-prepend">SomeContent</div>`);
+  assert(BS5InputGroupPrepend(["testclass"], "SomeContent") == `<div class="input-group-prepend testclass">SomeContent</div>`);
+  assert(BS5InputGroupPrepend(["a":"b"], "SomeContent") == `<div class="input-group-prepend" a="b">SomeContent</div>`);
+  assert(BS5InputGroupPrepend(["testclass"], ["a":"b"], "SomeContent") == `<div class="input-group-prepend testclass" a="b">SomeContent</div>`);
 }

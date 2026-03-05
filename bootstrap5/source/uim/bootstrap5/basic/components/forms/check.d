@@ -7,14 +7,9 @@ mixin(ShowModule!());
 @safe:
 
 @StringAttribute("for", "forId")
+@CssClass("inline", "form-check-inline")
 class BS5FormCheck : H5Div {
   mixin H5Template!(BS5FormCheck, ["form-check"], null);
-
-  BS5FormCheck inline(bool mode = true) {
-    if (mode)
-      this.addClasses("form-check-inline");
-    return this;
-  }
 
   // mixin(MyContent!("label", "BS5FormCheckLabel"));
 }
@@ -31,5 +26,5 @@ unittest {
   assert(BS5FormCheck(["testclass"], ["a":"b"], "Hello") == `<div class="form-check testclass" a="b"></div>`);
 
   assert(BS5FormCheck.forId("test") == `<div class="form-check" for="test"></div>`);
-  // assert(BS5FormCheck.inline() == `<div class="form-check form-check-inline"></div>`);
+  assert(BS5FormCheck.inline() == `<div class="form-check form-check-inline"></div>`);
 }

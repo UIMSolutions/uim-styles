@@ -7,30 +7,15 @@ mixin(ShowModule!());
 @safe: 
 
 class BS5InputGroup : H5Div {
-  mixin BS5This!(["input-group"]);
+  mixin H5Template!(BS5InputGroup, ["input-group"]);
 
 //   // mixin(MyContent!("prepend", "BS5InputGroupPrepend"));
-//   ///
-// unittest {
-//     // assert(BS5InputGroup.prepend == `<div class="input-group"><div class="input-group-prepend"></div></div>`);
-//   }
-
 //   // mixin(MyContent!("append", "BS5InputGroupAppend"));
-//   ///
-// unittest {
-//     // assert(BS5InputGroup.append == `<div class="input-group"><div class="input-group-append"></div></div>`);
-//   }
   
 //   // Setting size of group
 //   O size(string sizeName) { return this.addClasses("input-group-"~sizeName); }
 //   O small() { return this.addClasses("input-group-sm"); }
 //   O large() { return this.addClasses("input-group-lg"); }
-//   ///
-// unittest {
-//     // assert(BS5InputGroup.size("sm") == `<div class="input-group input-group-sm"></div>`);
-//     // assert(BS5InputGroup.small == `<div class="input-group input-group-sm"></div>`);
-//     // assert(BS5InputGroup.large == `<div class="input-group input-group-lg"></div>`);
-//   }
 
 //   // mixin(MyContent!("button", "BS5InputButton"));
 //   // mixin(MyContent!("checkbox", "BS5Checkbox"));
@@ -57,10 +42,16 @@ class BS5InputGroup : H5Div {
 //   // mixin(MyContent!("inputTime", "BS5InputTime"));
 //   // mixin(MyContent!("url", "BS5InputUrl"));
 //   // mixin(MyContent!("week", "BS5InputWeek"));
-
-  mixin(BS5Calls!("InputGroup"));
   }
 ///
 unittest {
-    // assert(BS5InputGroup == `<div class="input-group"></div>`);
+  assert(BS5InputGroup() == `<div class="input-group"></div>`);
+  assert(BS5InputGroup(["testclass"]) == `<div class="input-group testclass"></div>`);
+  assert(BS5InputGroup(["a":"b"]) == `<div class="input-group" a="b"></div>`);
+  assert(BS5InputGroup(["testclass"], ["a":"b"]) == `<div class="input-group testclass" a="b"></div>`);
+
+  assert(BS5InputGroup("SomeContent") == `<div class="input-group">SomeContent</div>`);
+  assert(BS5InputGroup(["testclass"], "SomeContent") == `<div class="input-group testclass">SomeContent</div>`);
+  assert(BS5InputGroup(["a":"b"], "SomeContent") == `<div class="input-group" a="b">SomeContent</div>`);
+  assert(BS5InputGroup(["testclass"], ["a":"b"], "SomeContent") == `<div class="input-group testclass" a="b">SomeContent</div>`);
 }

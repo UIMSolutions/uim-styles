@@ -17,10 +17,17 @@ mixin(ShowModule!());
   * ```
   */
 class BS5FormFileLabel : H5Label {
-  mixin BS5This!(["form-file-label"]);
-  mixin(BS5Calls!("FormFileLabel"));
+  mixin H5Template!(BS5FormFileLabel, ["form-file-label"]);
 }
 ///
 unittest {
-  // assert(BS5FormFileLabel() == `<label class="form-file-label"></label>`);
+  assert(BS5FormFileLabel() == `<label class="form-file-label"></label>`);
+  assert(BS5FormFileLabel(["testclass"]) == `<label class="form-file-label testclass"></label>`);
+  assert(BS5FormFileLabel(["a":"b"]) == `<label class="form-file-label" a="b"></label>`);
+  assert(BS5FormFileLabel(["testclass"], ["a":"b"]) == `<label class="form-file-label testclass" a="b"></label>`);
+
+  assert(BS5FormFileLabel("SomeContent") == `<label class="form-file-label">SomeContent</label>`);
+  assert(BS5FormFileLabel(["testclass"], "SomeContent") == `<label class="form-file-label testclass">SomeContent</label>`);
+  assert(BS5FormFileLabel(["a":"b"], "SomeContent") == `<label class="form-file-label" a="b">SomeContent</label>`);
+  assert(BS5FormFileLabel(["testclass"], ["a":"b"], "SomeContent") == `<label class="form-file-label testclass" a="b">SomeContent</label>`);
 }

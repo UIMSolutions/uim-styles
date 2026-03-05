@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe: 
 
 class BS5FormGroup : H5Div {
-  mixin BS5This!(["form-group"]);
+  mixin H5Template!(BS5FormGroup, ["form-group"]);
 
   // // mixin(MyAttribute!("readOnly", "readonly"));
   // // mixin(MyAttribute!("value", "value"));
@@ -48,10 +48,16 @@ class BS5FormGroup : H5Div {
   // // mixin(MyContent!("inputTime", "BS5InputTime"));
   // // mixin(MyContent!("url", "BS5InputUrl"));
   // // mixin(MyContent!("week", "BS5InputWeek"));
-
-  mixin(BS5Calls!("FormGroup"));
 }
 ///
 unittest {
-  // assert(BS5FormGroup() == `<div class="form-group"></div>`);
+  assert(BS5FormGroup() == `<div class="form-group"></div>`);
+  assert(BS5FormGroup(["testclass"]) == `<div class="form-group testclass"></div>`);
+  assert(BS5FormGroup(["a":"b"]) == `<div class="form-group" a="b"></div>`);
+  assert(BS5FormGroup(["testclass"], ["a":"b"]) == `<div class="form-group testclass" a="b"></div>`);
+
+  assert(BS5FormGroup("SomeContent") == `<div class="form-group">SomeContent</div>`);
+  assert(BS5FormGroup(["testclass"], "SomeContent") == `<div class="form-group testclass">SomeContent</div>`);
+  assert(BS5FormGroup(["a":"b"], "SomeContent") == `<div class="form-group" a="b">SomeContent</div>`);
+  assert(BS5FormGroup(["testclass"], ["a":"b"], "SomeContent") == `<div class="form-group testclass" a="b">SomeContent</div>`);
 }
