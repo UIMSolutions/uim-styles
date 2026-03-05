@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe:
 
 class BS5TableBody : H5Tbody {
-  mixin BS5This!();
+  mixin H5Template!(BS5TableBody, ["tbody"]);
 
   auto addrow() {
     addContent(new BS5TableRow);
@@ -18,10 +18,16 @@ class BS5TableBody : H5Tbody {
     addContent(new BS5TableRow);
     return this;
   }
-
-  mixin(BS5Calls!("TableBody"));
 }
 ///
 unittest {
-  // assert(BS5TableBody == `<tbody></tbody>`);
+  assert(BS5TableBody() == `<tbody></tbody>`);
+  assert(BS5TableBody(["testclass"]) == `<tbody class="testclass"></tbody>`);
+  assert(BS5TableBody(["a":"b"]) == `<tbody a="b"></tbody>`);
+  assert(BS5TableBody(["testclass"], ["a":"b"]) == `<tbody class="testclass" a="b"></tbody>`);
+
+  assert(BS5TableBody("SomeContent") == `<tbody>SomeContent</tbody>`);
+  assert(BS5TableBody(["testclass"], "SomeContent") == `<tbody class="testclass">SomeContent</tbody>`);
+  assert(BS5TableBody(["a":"b"], "SomeContent") == `<tbody a="b">SomeContent</tbody>`);
+  assert(BS5TableBody(["testclass"], ["a":"b"], "SomeContent") == `<tbody class="testclass" a="b">SomeContent</tbody>`);
 }

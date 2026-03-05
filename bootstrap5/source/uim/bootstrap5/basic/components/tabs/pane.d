@@ -7,12 +7,7 @@ mixin(ShowModule!());
 @safe:
 
 class BS5TabPane : H5Div {
-  mixin BS5This!(["tab-pane"], ["role":"tabpanel", "aria-expanded":"false"]);
-
-  // ///
-  // unittest {
-  //   // assert(BS5TabPane == `<div class="tab-pane" aria-expanded="false" role="tabpanel"></div>`);
-  // }
+  mixin H5Template!(BS5TabPane, ["tab-pane"], ["role":"tabpanel", "aria-expanded":"false"]);
 
   // BS5TabPane active(bool value = true) {
   //   if (value) {
@@ -26,12 +21,19 @@ class BS5TabPane : H5Div {
   //     this.addClasses("fade").attributes("aria-expanded", "false");
   //   return this;
   // }
-
-  mixin(BS5Calls!("TabPane"));
 }
 ///
 unittest {
-  // assert(
+  assert(BS5TabPane() == `<div class="tab-pane" aria-expanded="false" role="tabpanel"></div>`);
+  assert(BS5TabPane(["testclass"]) == `<div class="tab-pane testclass" aria-expanded="false" role="tabpanel"></div>`);
+  assert(BS5TabPane(["a":"b"]) == `<div class="tab-pane" a="b" aria-expanded="false" role="tabpanel"></div>`);
+  assert(BS5TabPane(["testclass"], ["a":"b"]) == `<div class="tab-pane testclass" a="b" aria-expanded="false" role="tabpanel"></div>`);
+
+  assert(BS5TabPane("SomeContent") == `<div class="tab-pane" aria-expanded="false" role="tabpanel">SomeContent</div>`);
+  assert(BS5TabPane(["testclass"], "SomeContent") == `<div class="tab-pane testclass" aria-expanded="false" role="tabpanel">SomeContent</div>`);
+  assert(BS5TabPane(["a":"b"], "SomeContent") == `<div class="tab-pane" a="b" aria-expanded="false" role="tabpanel">SomeContent</div>`);
+  assert(BS5TabPane(["testclass"], ["a":"b"], "SomeContent") == `<div class="tab-pane testclass" a="b" aria-expanded="false" role="tabpanel">SomeContent</div>`);
+
   //   BS5TabPane.active == `<div class="active tab-pane" aria-expanded="true" role="tabpanel"></div>`);
   // assert(
   //   BS5TabPane.fade == `<div class="fade tab-pane" aria-expanded="false" role="tabpanel"></div>`);

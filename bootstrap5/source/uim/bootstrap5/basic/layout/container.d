@@ -13,11 +13,7 @@ Containers are containing elements to wrap other elements and contain its grid s
 Default: A fixed container is a (responsive) fixed width container. 
 */
 class BS5Container : H5Div {
-  mixin BS5This!(["container"]);
-  // ///
-  // unittest {
-  //   // assert(BS5Container() == `<div class="container"></div>`);
-  // }
+  mixin H5Template!(BS5Container, ["container"]);
 
   // O fluid(bool mode = true) {
   //   if (mode)
@@ -32,12 +28,18 @@ class BS5Container : H5Div {
   // }
 
   // // mixin(MyContent!("row", "BS5Row"));
-
-  mixin(BS5Calls!"Container");
 }
 ///
 unittest {
-  // // assert(BS5Container() == `<div class="container"></div>`);
+  assert(BS5Container() == `<div class="container"></div>`);
+  assert(BS5Container(["testclass"]) == `<div class="container testclass"></div>`);
+  assert(BS5Container(["a":"b"]) == `<div class="container" a="b"></div>`);
+  assert(BS5Container(["testclass"], ["a":"b"]) == `<div class="container testclass" a="b"></div>`);
+
+  assert(BS5Container("SomeContent") == `<div class="container">SomeContent</div>`);
+  assert(BS5Container(["testclass"], "SomeContent") == `<div class="container testclass">SomeContent</div>`);
+  assert(BS5Container(["a":"b"], "SomeContent") == `<div class="container" a="b">SomeContent</div>`);
+  assert(BS5Container(["testclass"], ["a":"b"], "SomeContent") == `<div class="container testclass" a="b">SomeContent</div>`);
   // // assert(BS5Container.fluid(true) == `<div class="container-fluid"></div>`);
   // // assert(BS5Container.mode("fluid") == `<div class="container-fluid"></div>`); // Alternative
   // // assert(BS5Container.mode("xl") == `<div class="container-xl"></div>`);
