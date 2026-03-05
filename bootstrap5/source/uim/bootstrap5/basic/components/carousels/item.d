@@ -6,7 +6,7 @@ mixin(ShowModule!());
 
 @safe: 
 
-@CssClass("active)")
+@CssClass("active")
 class BS5CarouselItem : H5Div {
   mixin H5Template!(BS5CarouselItem, ["carousel-item"]);
 }

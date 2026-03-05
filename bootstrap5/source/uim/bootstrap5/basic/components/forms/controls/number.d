@@ -6,19 +6,8 @@ mixin(ShowModule!());
 
 @safe:
 
-@StringAttribute("value")
 class BS5InputNumber : H5Input {
   mixin H5Template!(BS5InputNumber, ["form-control"], ["type": "number"]);
-
-  // BS5InputNumber value(int aValue) {
-  //   attribute("value"] = to!string(aValue);
-  //   return this;
-  // }
-
-  // BS5InputNumber value(long aValue) {
-  //   attribute("value"] = to!string(aValue);
-  //   return this;
-  // }
 
   // BS5InputNumber value(size_t aValue) {
   //   attribute("value"] = to!string(aValue);

@@ -6,7 +6,6 @@ mixin(ShowModule!());
 
 @safe:  
 
-@StringAttribute("value")
 class BS5InputHidden : BS5Input {
   mixin H5Template!(BS5InputHidden, null, ["type":"hidden"]);
 

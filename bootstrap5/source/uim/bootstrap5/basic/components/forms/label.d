@@ -28,7 +28,7 @@ class BS5FormLabel : H5Label {
 }
 ///
 unittest {
-  assert(BS5FormLabel == `<label class="form-label"></label>`);
+  assert(BS5FormLabel() == `<label class="form-label"></label>`);
   assert(BS5FormLabel(["testclass"]) == `<label class="form-label testclass"></label>`);
   assert(BS5FormLabel(["a":"b"]) == `<label class="form-label" a="b"></label>`);
   assert(BS5FormLabel(["testclass"], ["a":"b"]) == `<label class="form-label testclass" a="b"></label>`);

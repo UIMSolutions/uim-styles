@@ -6,8 +6,6 @@ mixin(ShowModule!());
 
 @safe:  
 
-@StringAttribute("value")
-@StringAttribute("placeholder")
 class BS5Input : H5Input {
   mixin H5Template!(BS5Input, ["form-control"]);  
 

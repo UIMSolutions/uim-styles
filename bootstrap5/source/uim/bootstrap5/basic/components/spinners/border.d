@@ -19,7 +19,7 @@ mixin(ShowModule!());
   * ```
   */
 class BS5SpinnerBorder : H5Div {
-  mixin H5This!(BS5SpinnerBorder, ["spinner-border"]);
+  mixin H5Template!(BS5SpinnerBorder, ["spinner-border"]);
 }
 ///
 unittest {

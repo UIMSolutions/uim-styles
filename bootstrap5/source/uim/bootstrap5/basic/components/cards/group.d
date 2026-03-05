@@ -13,11 +13,11 @@ class BS5CardGroup : H5Div {
   /// Add card 
   // mixin(MyContent!("card", "BS5Card"));
 
-  BS5CardGroup card(BS5Card[] cards) {
-    foreach (c; cards)
-      this.card(c);
-    return this;
-  }
+  // BS5CardGroup card(BS5Card[] cards) {
+  //   foreach (c; cards)
+  //     this.card(c);
+  //   return this;
+  // }
 }
 ///
 unittest {
