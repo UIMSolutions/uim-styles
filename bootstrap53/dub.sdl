@@ -1,13 +1,13 @@
 // Metadata
-name "bootstrap5"
-description "uim library for bootstrap5 layouts with vibe.d utilities"
-homepage "https://www.sueel.de/uim/layouts/bootstrap5"
+name "bootstrap53"
+description "uim library for bootstrap5.3 layouts with vibe.d utilities"
+homepage "https://www.sueel.de/uim/layouts/bootstrap53"
 authors "Ozan Nurettin Süel"
 copyright "Copyright © 2018 - 2026, ONS"
 license "Apache-2.0"
 
 // Target
-targetName "uim-styles-bootstrap5"
+targetName "uim-styles-bootstrap53"
 targetType "library"
 
 // Dependencies
