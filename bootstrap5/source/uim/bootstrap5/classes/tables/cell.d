@@ -26,8 +26,6 @@ class BS5TableCell : H5Td {
 // unittest {
 //     // assert(BS5TableCell.rowspan(2) == `<td rowspan="2"></td>`);
 //   }
-
-mixin(BS5Calls!"TableCell");
 }
 ///
 unittest {
