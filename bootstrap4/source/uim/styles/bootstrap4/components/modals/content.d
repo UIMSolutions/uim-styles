@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe: 
 
 class BS4ModalContent : H5Div {
-  mixin H5This!(["modal-content"]));
+  mixin H5Template!(["modal-content"]));
 
   O fade(bool mode = true) { return this.addClasses("fade"); }
 }

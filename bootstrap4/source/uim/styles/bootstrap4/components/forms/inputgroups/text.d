@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe: 
 
 class BS4InputGroupText : H5Div {
-  mixin H5This!(["input-group-text"]));
+  mixin H5Template!(["input-group-text"]));
 }
 static BS4InputGroupText");
 

@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe: 
 
 class BS4BreadcrumbLink : BS4Obj {  
-  mixin(H5This!("A", null, null));
+  mixin(H5Template!("A", null, null));
 
 }
 static BS4BreadcrumbLink");

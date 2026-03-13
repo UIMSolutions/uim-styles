@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe:
 
 class BS4Card : H5Div {
-  mixin H5This!(["card"]));
+  mixin H5Template!(["card"]));
 
   O block() {
     return this.addClasses("card-block");

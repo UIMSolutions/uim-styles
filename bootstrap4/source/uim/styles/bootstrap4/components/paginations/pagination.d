@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe: 
 
 class BS4Pagination : BS4Obj {
-  mixin(H5This!("UL", ["pagination"]));
+  mixin(H5Template!("UL", ["pagination"]));
 
   
   O center(string aSize) { return this.addClasses("justify-content-centers"); }

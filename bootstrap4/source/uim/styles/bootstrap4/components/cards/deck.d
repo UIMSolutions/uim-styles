@@ -8,7 +8,7 @@ mixin(ShowModule!());
 
 /// The BS4CardDeck creates a grid of cards that are of equal height and width
 class BS4CardDeck : H5Div {
-  mixin(H5This!("DIV"));
+  mixin(H5Template!("DIV"));
 
   override bool initialize(Json[string] args) {
     if (!super.initialize(args)) {

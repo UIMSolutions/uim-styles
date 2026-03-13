@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe: 
 
 class BS4DropdownMenu : H5Div {
-  mixin H5This!(["dropdown-menu"]);
+  mixin H5Template!(["dropdown-menu"]);
 
   mixin(MyAttribute!("label", "aria-labelledby"));
 

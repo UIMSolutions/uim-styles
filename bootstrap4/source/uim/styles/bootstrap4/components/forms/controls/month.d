@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe:  
 
 class BS4InputMonth : BS4Input {
-  mixin(H5This!("", ["form-control"], `["type":"month"]`));
+  mixin(H5Template!("", ["form-control"], `["type":"month"]`));
 }
 static BS4InputMonth"));
 

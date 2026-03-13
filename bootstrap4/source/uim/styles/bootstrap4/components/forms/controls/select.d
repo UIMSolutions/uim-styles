@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe:  
 
 class BS4InputSelect : BS4Obj {
-  mixin(H5This!("Select", ["form-control"]));  
+  mixin(H5Template!("Select", ["form-control"]));  
 
   mixin(MyContent!("option", "H5Option"));
   O options(string[] values, string selectedValue = "", string disabledValue = "") {

@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe:  
 
 class BS4InputSearch : BS4Input {
-  mixin(H5This!("", null, `["type":"search"]`));
+  mixin(H5Template!("", null, `["type":"search"]`));
 }
 static BS4InputSearch"));
 

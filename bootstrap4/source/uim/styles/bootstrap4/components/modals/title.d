@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe: 
 
 class BS4ModalTitle : BS4Obj {
-  mixin(H5This!("H5", ["modal-title"]));
+  mixin(H5Template!("H5", ["modal-title"]));
 }
 static BS4ModalTitle");
 

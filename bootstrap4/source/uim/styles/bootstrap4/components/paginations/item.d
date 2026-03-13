@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe: 
 
 class BS4PageItem : BS4Obj {
-  mixin(H5This!("LI", ["page-item"]));
+  mixin(H5Template!("LI", ["page-item"]));
 
   mixin(MyContent!("link", "BS4PageLink"));
 

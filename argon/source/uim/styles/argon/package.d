@@ -1,14 +1,16 @@
 module uim.styles.argon;
 
 // Phobos libs
-public import core.vararg;
-public import std.stdio;
-public import std.string;
-public import std.conv;
-public import std.array;
-public import std.file;
-public import std.traits;
-public import std.uuid;
+public {
+  import core.vararg;
+  import std.stdio;
+  import std.string;
+  import std.conv;
+  import std.array;
+  import std.file;
+  import std.traits;
+  import std.uuid;
+} 
 
 // External Libs
 public import vibe.d;

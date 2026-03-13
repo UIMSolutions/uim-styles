@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe: 
 
 class BS4FormCheckLabel : BS4Obj {
-  mixin(H5This!("LABEL", ["form-check-label"]));
+  mixin(H5Template!("LABEL", ["form-check-label"]));
 }
 static BS4FormCheckLabel");
 

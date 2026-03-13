@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe: 
 
 class BS4FormCheckInput : BS4Obj {
-  mixin(H5This!("input", ["form-check-input"]));
+  mixin(H5Template!("input", ["form-check-input"]));
   override public void initialize() {
     super.initialize;
     _single = true;

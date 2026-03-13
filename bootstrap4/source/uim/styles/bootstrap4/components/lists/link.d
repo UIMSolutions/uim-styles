@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe: 
 
 class BS4ListLink : BS4Obj {
-  mixin(H5This!("A", ["list-group-item", "list-group-item-action"], null));
+  mixin(H5Template!("A", ["list-group-item", "list-group-item-action"], null));
 
   O active(bool value = true) { return this.addClasses("active"); }
 

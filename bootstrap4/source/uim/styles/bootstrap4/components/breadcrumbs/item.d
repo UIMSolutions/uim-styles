@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe: 
 
 class BS4BreadcrumbItem : BS4Obj {
-  mixin(H5This!("LI", ["breadcrumb-item"]));
+  mixin(H5Template!("LI", ["breadcrumb-item"]));
 
   O active(bool mode = true) { if (mode) this.addClasses("active"); return this; }
   ///

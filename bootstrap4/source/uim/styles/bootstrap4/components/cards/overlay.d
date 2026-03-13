@@ -8,7 +8,7 @@ mixin(ShowModule!());
 
 /// Turns an image into a card background and adds text on top of the image
 class BS4CardOverlay : H5Div {
-  mixin H5This!(["card-img-overlay"]);
+  mixin H5Template!(["card-img-overlay"]);
 }
 /// Shortcuts
 static BS4CardOverlay");

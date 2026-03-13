@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe:
 
 class BS4CarouselIndicators : BS4Obj {
-  mixin(H5This!("ol", ["carousel-indicators"]));
+  mixin(H5Template!("ol", ["carousel-indicators"]));
 
   auto addIndicator(H5Li indicator) {
     this.addContent(indicator);

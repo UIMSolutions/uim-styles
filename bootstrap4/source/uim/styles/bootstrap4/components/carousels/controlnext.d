@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe: 
 
 class BS4CarouselControlNext : BS4Obj {
-  mixin(H5This!("a", ["carousel-control-next"], `["data-slide":"next"]`));
+  mixin(H5Template!("a", ["carousel-control-next"], `["data-slide":"next"]`));
   override public void initialize() {
     super.initialize;
     

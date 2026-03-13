@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe: 
 
 class BS4ButtonObj : BS4Obj {
-  mixin(H5This!("BUTTON", null, `["type":"button"]`));
+  mixin(H5Template!("BUTTON", null, `["type":"button"]`));
 
   // mixin(MyAttribute!("buttonType", "type"));
   mixin(TProperty!("string", "colorMode"));

@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe: 
 
 class BS4ModalDialog : H5Div {
-  mixin H5This!(["modal-dialog"], `["role":"document"]`));
+  mixin H5Template!(["modal-dialog"], `["role":"document"]`));
 
   O fade(bool mode = true) { return this.addClasses("fade"); }
   ///

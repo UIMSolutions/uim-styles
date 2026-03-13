@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe:  
 
 class BS4Input : BS4Obj {
-  mixin(H5This!("Input", ["form-control"], null, true));  
+  mixin(H5Template!("Input", ["form-control"], null, true));  
 
 }
 static BS4Input"));

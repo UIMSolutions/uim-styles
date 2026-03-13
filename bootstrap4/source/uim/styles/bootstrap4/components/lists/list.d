@@ -8,7 +8,7 @@ mixin(ShowModule!());
 
 /// An unordered list with list items
 class BS4List : BS4Obj {
-  mixin(H5This!("UL", ["list-group"]));
+  mixin(H5Template!("UL", ["list-group"]));
 
   // Removes some borders and rounded corners to render group in a parent container
   O flush() {

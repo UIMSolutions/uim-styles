@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe:  
 
 class BS4InputWeek : BS4Input {
-  mixin(H5This!("", null, `["type":"week"]`));
+  mixin(H5Template!("", null, `["type":"week"]`));
 }
 static BS4InputWeek"));
 

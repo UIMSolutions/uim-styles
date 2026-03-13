@@ -10,7 +10,7 @@ mixin(ShowModule!());
  * Badges in Bootstrap are little additional information to highlight text or numbers.
  */
 class BS4Badge : BS4Obj {
-  mixin(H5This!("Span", ["badge"]));
+  mixin(H5Template!("Span", ["badge"]));
 
   // Color of badge
   auto color(string name) {

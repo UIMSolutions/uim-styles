@@ -8,7 +8,7 @@ mixin(ShowModule!());
 
 class BS4CustomFileLabel : BS4Obj
 {
-  mixin(H5This!("LABEL", ["custom-file-label"]));
+  mixin(H5Template!("LABEL", ["custom-file-label"]));
 }
 
 static BS4CustomFileLabel");

@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe:  
 
 class BS4InputButton : BS4Input {
-  mixin(H5This!(null, null, `["type":"button"]`));
+  mixin(H5Template!(null, null, `["type":"button"]`));
 }
 static BS4InputButton"));
 ///

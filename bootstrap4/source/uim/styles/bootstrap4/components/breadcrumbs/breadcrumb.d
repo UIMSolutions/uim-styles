@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe: 
 
 class BS4Breadcrumb : BS4Obj {
-  mixin(H5This!("Nav", null, `["aria-label":"breadcrumb"]`));
+  mixin(H5Template!("Nav", null, `["aria-label":"breadcrumb"]`));
 
   mixin(MyContent!("list", "BS4BreadcrumbList"));
   ///

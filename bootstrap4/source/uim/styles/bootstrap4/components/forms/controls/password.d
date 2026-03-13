@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe:  
 
 class BS4Password : BS4Input {
-  mixin(H5This!(null, ["form-control"], `["type":"password"]`));
+  mixin(H5Template!(null, ["form-control"], `["type":"password"]`));
 }
 static BS4Password"));
 

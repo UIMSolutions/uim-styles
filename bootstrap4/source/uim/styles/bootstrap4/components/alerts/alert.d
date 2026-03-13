@@ -8,7 +8,7 @@ mixin(ShowModule!());
 
 ///Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.
 class BS4Alert : H5Div {
-  mixin(H5This!("BS4Alert");
+  mixin(H5Template!("BS4Alert"));
 
   override bool initialize(Json[string] args = null) {
     if (!super.initialize(args)) {
@@ -60,7 +60,7 @@ static BS4Alert opCall(string content = null) {
 }
 
 class BS4AlertLink : H5Div {
-  mixin(H5This!(["alert-link"], ["href":"#"]));
+  mixin(H5Template!(["alert-link"], ["href":"#"]));
 }
 
 mixin(BS4Calls!("Alert"));

@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe: 
 
 class BS4ModalButton : BS4Obj {
-  mixin(H5This!("Button", ["btn"], `["data-toggle":"modal"]`));
+  mixin(H5Template!("Button", ["btn"], `["data-toggle":"modal"]`));
 
   O target(string targetId) { attribute("data-target"] = "#"~targetId;  return this; }
   O backdrop(bool modeBackdrop = true) { attribute("data-backdrop"] = "static"; return this; }

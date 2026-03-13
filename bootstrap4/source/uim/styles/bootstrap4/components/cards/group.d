@@ -8,7 +8,7 @@ mixin(ShowModule!());
 
 /// The BS4CardGroup creates a grid of cards that are of equal height and width, and no margin between cards
 class BS4CardGroup : H5Div {
-  mixin(H5This!("BS4CardGroup"));
+  mixin(H5Template!("BS4CardGroup"));
 
 override bool initialize(Json[string] args = null) {
     if (!super.initialize(args)) {

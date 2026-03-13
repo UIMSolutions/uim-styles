@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe:  
 
 class BS4InputEmail : BS4Input {
-  mixin(H5This!(null, null, `["type":"email"]`));
+  mixin(H5Template!(null, null, `["type":"email"]`));
 }
 static BS4InputEmail"));
 

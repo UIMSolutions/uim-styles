@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe: 
 
 class BS4CardLink : BS4Obj {
-  mixin(H5This!("A", ["card-link"], `["href":"#"]`));
+  mixin(H5Template!("A", ["card-link"], `["href":"#"]`));
 }
 static BS4CardLink");
 ///

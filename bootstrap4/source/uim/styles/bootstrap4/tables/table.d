@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe: 
 
 class BS4Table : BS4Obj {
-  mixin(H5This!("TABLE", ["table"]));
+  mixin(H5Template!("TABLE", ["table"]));
 
   mixin(MyContent!("caption", "H5Caption"));
   ///

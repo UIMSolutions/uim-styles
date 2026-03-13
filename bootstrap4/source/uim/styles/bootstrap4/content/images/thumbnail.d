@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe: 
 
 class BS4ImageFluid : BS4Image {
-  mixin(H5This!("Img", ["img-thumbnail"]));
+  mixin(H5Template!("Img", ["img-thumbnail"]));
 }
 static BS4ImageFluid"));
 

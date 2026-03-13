@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe:  
 
 class BS4InputText : BS4Input {
-  mixin(H5This!("", null, `["type":"text"]`));
+  mixin(H5Template!("", null, `["type":"text"]`));
 }
 static BS4InputText"));
 

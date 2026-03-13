@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe:  
 
 class BS4InputTextarea : BS4Obj {
-  mixin(H5This!("textarea", ["form-control"]));
+  mixin(H5Template!("textarea", ["form-control"]));
 
   mixin(MyAttribute!"rows");
   mixin(MyAttribute!"cols");

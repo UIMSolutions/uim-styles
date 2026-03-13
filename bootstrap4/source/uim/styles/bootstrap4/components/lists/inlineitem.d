@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe: 
 
 class BS4ListInlineItem : BS4Obj {
-  mixin(H5This!("LI", ["list-inline-item"]));
+  mixin(H5Template!("LI", ["list-inline-item"]));
 }
 static BS4ListInlineItem");
 

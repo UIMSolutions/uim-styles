@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe: 
 
 class BS4CarouselControlPrev : BS4Obj {
-  mixin(H5This!("a", ["carousel-control-prev"], `["data-slide":"prev"]`));
+  mixin(H5Template!("a", ["carousel-control-prev"], `["data-slide":"prev"]`));
   override public void initialize() {
     super.initialize;
     this.addContent(H5Span(["carousel-control-prev-icon"]));

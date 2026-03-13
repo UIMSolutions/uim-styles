@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe: 
 
 class BS4ButtonGroup : H5Div {
-  mixin H5This!(["btn-group"], `["role":"group"]`));
+  mixin H5Template!(["btn-group"], `["role":"group"]`));
 
   // Set size of button group
   O size(string value) {

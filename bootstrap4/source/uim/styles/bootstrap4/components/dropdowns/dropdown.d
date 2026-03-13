@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe: 
 
 class BS4Dropdown : H5Div {
-  mixin H5This!(["dropdown"]);
+  mixin H5Template!(["dropdown"]);
 
   mixin(MyContent!("menu", "BS4DropdownMenu"));
   mixin(MyContent!("toggleLink", "BS4ToggleLink"));

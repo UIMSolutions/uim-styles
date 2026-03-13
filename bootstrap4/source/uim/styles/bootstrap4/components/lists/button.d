@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe: 
 
 class BS4ListButton : BS4Obj {
-  mixin(H5This!("button", ["list-group-item", "list-group-item-action"], null));
+  mixin(H5Template!("button", ["list-group-item", "list-group-item-action"], null));
 
   /// Set button to active
   O active(bool value = true) { this.addClasses("active"); return this; }

@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe: 
 
 class BS4TableHeader : BS4Obj {
-  mixin(H5This!"Thead");
+  mixin(H5Template!"Thead");
 
   mixin(MyContent!("row", "BS4TableRow"));
   mixin(MyContent!("tr", "BS4TableRow"));

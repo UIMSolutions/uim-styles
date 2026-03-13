@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe: 
 
 class BS4CustomRadio : BS4CustomControl {
-  mixin(H5This!("DIV", ["custom-control", "custom-radio"]));
+  mixin(H5Template!("DIV", ["custom-control", "custom-radio"]));
 }
 
 static BS4CustomRadio");

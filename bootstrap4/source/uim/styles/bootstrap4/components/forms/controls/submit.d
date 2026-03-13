@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe:  
 
 class BS4InputSubmit : BS4Obj {
-  mixin(H5This!("Input", ["form-control"], `["type":"submit"]`));
+  mixin(H5Template!("Input", ["form-control"], `["type":"submit"]`));
   override public void initialize() {
     super.initialize;
     _single = true;

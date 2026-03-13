@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe: 
 
 class BS4ListLinks : H5Div {
-  mixin H5This!(["list-group"]));
+  mixin H5Template!(["list-group"]));
 
   mixin(MyContent!("link", "BS4ListLink"));
   mixin(MyContent!("button", "BS4ListButton"));

@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe:  
 
 class BS4InputDate : BS4Obj {
-  mixin(H5This!("Input", ["form-control"], `["type":"date"]`));
+  mixin(H5Template!("Input", ["form-control"], `["type":"date"]`));
   override public void initialize() {
     super.initialize;
     _single = true;

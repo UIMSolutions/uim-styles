@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe: 
 
 class BS4NavbarTogglerIcon : BS4Obj {
-  mixin(H5This!("Span", ["navbar-toggler-icon"]));
+  mixin(H5Template!("Span", ["navbar-toggler-icon"]));
 }
 static BS4NavbarTogglerIcon");
 

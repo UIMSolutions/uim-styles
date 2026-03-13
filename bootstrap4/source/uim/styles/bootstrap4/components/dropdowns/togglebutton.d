@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe: 
 
 class BS4DropdownTogglebutton : BS4Button {
-  mixin(H5This!("Button", ["btn", "dropdown-toggle"], `["aria-haspopup":"true", "aria-expanded":"false"]`));
+  mixin(H5Template!("Button", ["btn", "dropdown-toggle"], `["aria-haspopup":"true", "aria-expanded":"false"]`));
 }
 static BS4DropdownTogglebutton");
 ///

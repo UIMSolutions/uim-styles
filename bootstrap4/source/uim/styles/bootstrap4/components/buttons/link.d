@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe: 
 
 class BS4ButtonLink : BS4ButtonObj {
-  mixin(H5This!("A", ["btn"], `["type":"button"]`));
+  mixin(H5Template!("A", ["btn"], `["type":"button"]`));
 }
 static BS4ButtonLink");
 

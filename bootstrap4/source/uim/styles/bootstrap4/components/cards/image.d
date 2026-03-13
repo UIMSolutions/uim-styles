@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe: 
 
 class BS4CardImage : BS4Obj { // default top
-  mixin(H5This!("IMG", ["card-img-top"], null, true));
+  mixin(H5Template!("IMG", ["card-img-top"], null, true));
   override void initialize() {
     super.initialize;
     _tag = "img";

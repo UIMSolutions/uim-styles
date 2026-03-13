@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe: 
 
 class BS4CustomFileInput : BS4Obj {
-  mixin(H5This!("INPUT", ["custom-file-input"]));
+  mixin(H5Template!("INPUT", ["custom-file-input"]));
   override public void initialize() {
     super.initialize;
     _single = true;

@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe: 
 
 class BS4PageLink : BS4Obj {
-  mixin(H5This!("A", ["page-link"], `["href":"#"]`));
+  mixin(H5Template!("A", ["page-link"], `["href":"#"]`));
 }
 static BS4PageLink");
 

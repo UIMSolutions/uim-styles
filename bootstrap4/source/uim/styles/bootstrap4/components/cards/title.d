@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe: 
 
 class BS4CardTitle : BS4Obj {
-  mixin(H5This!("H4", ["card-title"]));
+  mixin(H5Template!("H4", ["card-title"]));
 
   O level(uint value) { if (value > 0) _tag = "h"~to!string(value); return this; }
   O level(string value) { if (value.length > 0) _tag = "h"~value; return this; }

@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe: 
 
 class BS4CustomInput : BS4Obj {
-  mixin(H5This!("INPUT", ["custom-control-input"], null, true));
+  mixin(H5Template!("INPUT", ["custom-control-input"], null, true));
   override void initialize() {
     super.initialize;
     _single = true;

@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe: 
 
 class BS4TableCell : BS4Obj {
-  mixin(H5This!"Td");
+  mixin(H5Template!"Td");
   
   O colspan(int span) { return this.colspan(to!string(span)); }
   O colspan(string span) { 

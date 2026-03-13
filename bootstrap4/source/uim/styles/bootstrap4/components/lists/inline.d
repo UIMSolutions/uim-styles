@@ -8,7 +8,7 @@ mixin(ShowModule!());
 
 /// An unordered list with list items
 class BS4ListInline : BS4Obj {
-  mixin(H5This!("UL", ["list-inline"]));
+  mixin(H5Template!("UL", ["list-inline"]));
 
   mixin(MyContent!("item", "BS4ListInlineItem"));
   ///

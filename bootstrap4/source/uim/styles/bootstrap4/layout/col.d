@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe: 
 
 class BS4Col : BS4Obj {
-  mixin(H5This!("Div"));
+  mixin(H5Template!("Div"));
 
   O sizes(string[] someSizes...) { 
     sizes(someSizes.dup); 

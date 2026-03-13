@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe: 
 
 class BS4DropdownForm : BS4Obj {
-  mixin(H5This!("form", null, null));
+  mixin(H5Template!("form", null, null));
 }
 static BS4DropdownForm");
 

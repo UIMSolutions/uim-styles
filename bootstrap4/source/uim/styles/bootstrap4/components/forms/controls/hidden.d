@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe:  
 
 class BS4InputHidden : BS4Input {
-  mixin(H5This!("", null, `["type":"hidden"]`));
+  mixin(H5Template!("", null, `["type":"hidden"]`));
 }
 static BS4InputHidden"));
 

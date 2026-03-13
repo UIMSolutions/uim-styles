@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe: 
 
 class BS4CarouselItem : H5Div {
-  mixin H5This!(["carousel-item"]));
+  mixin H5Template!(["carousel-item"]));
 }
 static BS4CarouselItem");
 ///

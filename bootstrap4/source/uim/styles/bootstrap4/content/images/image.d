@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe: 
 
 class BS4Image : BS4Obj {
-  mixin(H5This!("Img"));
+  mixin(H5Template!("Img"));
   override public void initialize() { super.initialize; _single = true; }
 
   /// alt attribute 

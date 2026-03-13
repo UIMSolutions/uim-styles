@@ -8,7 +8,7 @@ mixin(ShowModule!());
 
 /* BS4NavbarToggler - for use with collapse plugin and other navigation toggling behaviors */
 class BS4NavbarToggler : BS4ButtonObj {
-  mixin(H5This!("button", ["navbar-toggler"], `["data-toggle":"collapse", "aria-controls":"navbar"]`));
+  mixin(H5Template!("button", ["navbar-toggler"], `["data-toggle":"collapse", "aria-controls":"navbar"]`));
 
   O position(string value) {
     return this.addClasses("navbar-toggler-" ~ position);

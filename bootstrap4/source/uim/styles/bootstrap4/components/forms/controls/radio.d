@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe:  
 
 class BS4Radio : BS4Input {
-  mixin(H5This!("", null, `["type":"radio"]`));
+  mixin(H5Template!("", null, `["type":"radio"]`));
 }
 static BS4Radio"));
 

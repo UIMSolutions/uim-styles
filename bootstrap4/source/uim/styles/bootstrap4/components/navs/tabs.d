@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe: 
 
 class BS4NavTabs : BS4Obj {
-  mixin(H5This!("UL", ["nav", "nav-tabs"], `["role":"tablist"]`));
+  mixin(H5Template!("UL", ["nav", "nav-tabs"], `["role":"tablist"]`));
 
   mixin(MyContent!("item", "BS4NavItem"));
 }

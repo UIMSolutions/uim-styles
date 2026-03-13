@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe: 
 
 class BS4CardText : BS4Obj {
-  mixin(H5This!("P", ["card-text"]));
+  mixin(H5Template!("P", ["card-text"]));
 }
 static BS4CardText");
 

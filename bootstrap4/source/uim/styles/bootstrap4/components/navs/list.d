@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe: 
 
 class BS4NavList : BS4Obj {
-  mixin(H5This!("UL", ["nav"]));
+  mixin(H5Template!("UL", ["nav"]));
 
   mixin(MyContent!("item", "BS4NavItem"));
   O vertical(bool mode = true) { return this.addClasses("flex-column"); }

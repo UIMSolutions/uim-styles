@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe: 
 
 class BS4CardBlockquote : H5Blockquote {
-  mixin(H5This!("BLOCKQUOTE", ["card-blockquote"]));
+  mixin(H5Template!("BLOCKQUOTE", ["card-blockquote"]));
   mixin(H5Calls!("CardBlockquote"));
 }
 ///

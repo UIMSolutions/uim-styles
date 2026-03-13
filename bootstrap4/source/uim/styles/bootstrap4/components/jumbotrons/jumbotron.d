@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe: 
 
 class BS4Jumbotron : H5Div {
-  mixin H5This!(["jumbotron"]));
+  mixin H5Template!(["jumbotron"]));
 
   ///
 unittest {

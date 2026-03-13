@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe: 
 
 class BS4DropdownLink : BS4Obj {
-  mixin(H5This!("A", ["dropdown-item"]));
+  mixin(H5Template!("A", ["dropdown-item"]));
 }
 static BS4DropdownLink");
 

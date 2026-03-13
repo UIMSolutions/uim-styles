@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe:  
 
 class BS4InputReset : BS4Input {
-  mixin(H5This!("", null, `["type":"reset"]`));
+  mixin(H5Template!("", null, `["type":"reset"]`));
 }
 static BS4InputReset"));
 ///

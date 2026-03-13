@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe:  
 
 class BS4InputUrl : BS4Input {
-  mixin(H5This!("", null, `["type":"url"]`));
+  mixin(H5Template!("", null, `["type":"url"]`));
 }
 static BS4InputUrl"));
 

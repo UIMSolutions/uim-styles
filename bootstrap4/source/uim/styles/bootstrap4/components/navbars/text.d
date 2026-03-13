@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe: 
 
 class BS4NavbarText : BS4Obj {
-  mixin(H5This!("SPAN", ["navbar-text"]));
+  mixin(H5Template!("SPAN", ["navbar-text"]));
 }
 static BS4NavbarText");
 

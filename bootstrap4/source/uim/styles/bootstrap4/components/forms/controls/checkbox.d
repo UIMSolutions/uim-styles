@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe:  
 
 class BS4Checkbox : BS4Input {
-  mixin(H5This!(null, null, `["type":"checkbox"]`));
+  mixin(H5Template!(null, null, `["type":"checkbox"]`));
 }
 static BS4Checkbox"));
 ///

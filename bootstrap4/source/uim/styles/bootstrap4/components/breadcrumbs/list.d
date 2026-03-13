@@ -7,7 +7,7 @@ mixin(ShowModule!());
 @safe: 
 
 class BS4BreadcrumbList : BS4Obj {
-  mixin(H5This!("Ol", ["breadcrumb"], null));
+  mixin(H5Template!("Ol", ["breadcrumb"], null));
 
   mixin(MyContent!("item", "BS4BreadcrumbItem"));
   ///
