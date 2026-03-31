@@ -5,5 +5,8 @@ public { // Packages
 }
 
 public { // Modules
+  import uim.bootstrap53.forms.collabel;
+  import uim.bootstrap53.forms.input;
   import uim.bootstrap53.forms.label;
+  import uim.bootstrap53.forms.textarea;
 }

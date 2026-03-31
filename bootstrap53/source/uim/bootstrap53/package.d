@@ -4,4 +4,5 @@ public {
   import uim.style;
 
   import uim.bootstrap53.components;
+  import uim.bootstrap53.forms;
 }
