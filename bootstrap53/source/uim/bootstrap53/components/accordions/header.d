@@ -5,7 +5,6 @@ import uim.bootstrap53;
 mixin(ShowModule!());
 
 @safe:
-
 class BS53AccordionHeader : H5H2 {
   mixin H5Template!(BS53AccordionHeader, ["accordion-header"], null);
 }
